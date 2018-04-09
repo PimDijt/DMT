@@ -132,7 +132,7 @@ Business Analytics,yes,no,yes,no,male,fat,01-09-1994,3,yes,200,1,00:00,Food,No c
 Bioinformatics and Systems Biology,no,no,yes,yes,male,no idea,02-05-1996,7,no,3,3,00:00,Good sleep,No compile errors on first try,
 Bioinformatics and Systems Biology,yes,no,yes,no,male,fat,10-09-1996,4,no,0.5,2,02:00,Good weather,No lectures,
 Computational Science,yes,no,yes,no,male,no idea,07-06-1993,4,yes,0.33,42,23:15,No early lecture,No lectures,
-Management, Policy Analysis and Entrepreneurship,no,no,yes,no,male,neither,04-06-1992,4,no,100,4,11:00,Good weather,Free time
+Management, Policy Analysis and Entrepreneurship,no,no,yes,unknown,male,neither,04-06-1992,4,no,100,4,11:00,Good weather,Free time
 Computational Science,yes,unknown,yes,yes,male,neither,xx-xx-1990,1,no,80,4,03:00,Productive,No pain,
 Artificial Intelligence,yes,yes,yes,no,female,neither,20-08-xxxx,A lot,no,5,2,01:15,Good weather,No school,
 Computer Science,no,no,yes,yes,female,no idea,12-10-1991,A lot ,no,100,3,03:00,Good food,No stress,
