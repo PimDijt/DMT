@@ -1,203 +1,203 @@
-program,course_ml,course_ir,course_stat,course_db,gender,chocolate_effect,birthday,num_neighbors,stand_up,money,random_number,bed_time,good_day1,good_day2,
-Finance,no,no,yes,no,male,neither,12-09-1996,1,no,0.5,9,01:30,No time series assignment,unknown,
-Business Analytics,yes,yes,no,yes,male,unknown,05-04-2000,400,unknown,25,7,04:00,Guest lecture by Tupac,No heart attacks,
-Artificial Intelligence,no,no,no,yes,male,no idea,30-12-1991,4,no,100,5,23:59,Fun,Good day,
-Computer Science,yes,yes,yes,yes,male,fat,11-06-1993,10,no,40,8,23:00,Good food,Good sleep,
-Econometrics and Operations Research,yes,yes,yes,yes,male,no idea,09-09-1994,1,no,100,7,23:30,McDonalds,Good sleep,
-Business Analytics,yes,no,yes,yes,female,fat,27-09-1992,6,no,2,7,22:10,Good food,fun time,
-Artificial Intelligence,no,no,unknown,unknown,female,neither,20-05-1993,7,unknown,0,88,22:47,Good weather,Activities,
-Econometrics and Operations Research,yes,yes,yes,yes,male,fat,05-11-1990,24,no,5,8,01:00,Sex,Asian food,
-Bioinformatics and Systems Biology,yes,no,no,no,male,fat,22-09-1988,9,no,1,7,23:59,Good dinner,Assignment done,
-Business Analytics,yes,yes,yes,no,male,slim,19-10-xxxx,2,no,110,unknown,23:30,Cheese,Beer,
-Bioinformatics and Systems Biology,no,no,no,yes,female,fat,05-10-1987,7,no,1,13,01:30,Good weather,Beer,
-Computational Science,no,no,yes,yes,male,fat,07-11-1991,7,no,110,9293746289201,23:55,Good weather,Beer,
-Computer Science,no,no,yes,yes,male,neither,24-03-1994,1,no,1,7,unknown,Pizza,Beer,
-Computer Science,no,no,no,yes,male,no idea,09-01-1994,6,no,0,8,00:00,Sleep,Beer,
-Computational Science,no,no,yes,no,male,no idea,18-02-1994,7,no,10,75389275660,23:30,Sports,Productive,
-Business Analytics,no,no,yes,no,female,neither,18-02-1993,1,no,10,4,23:30,Good food,Friends,
-Artificial Intelligence,no,yes,yes,no,male,no idea,19-04-1989,7,no,0.25,9,23:45,Salary,Bike not braking down,
-Bioinformatics and Systems Biology,yes,no,yes,no,male,no idea,18-09-1991,6,no,1,8,00:00,Good weather,Breakfast,
-Bioinformatics and Systems Biology,no,no,yes,yes,male,slim,05-02-1990,25,no,100,5,02:00,Music,Challenge,
-Bioinformatics and Systems Biology,no,no,yes,no,male,fat,26-11-1993,1,no,5,382763,23:00,Good sleep,Cheese,
-Computer Science,yes,yes,yes,no,male,neither,27-09-1993,5,no,1,6739,23:00,Chocolate,Chocolate,
-Bioinformatics and Systems Biology,no,no,no,no,male,fat,06-11-1992,2,no,1,537,02:30,Food,Chocolate,
-Econometrics and Operations Research,no,no,yes,no,male,neither,xx-xx-1995,3,no,10,8,00:02,Sports,Chocolate,
-Business Analytics,yes,yes,no,yes,unknown,fat,20-11-1995,2,yes,90,8,00:00,Wake up time,Chocolate,
-Bioinformatics and Systems Biology,yes,no,yes,no,female,fat,16-01-1996,0,no,100,4578994211,23:00,Cats,Coffee,
-Computer Science,no,no,yes,yes,female,slim,30-03-1995,6,no,1,42,23:45,Cats,Coffee,
-Artificial Intelligence,yes,yes,yes,yes,male,fat,23-12-xxxx,5,no,1234,4,23:30,Food,Coffee,
-Computational Science,no,no,yes,no,female,slim,08-08-1993,1,no,50,1,00:30,Good company,Coffee,
-Artificial Intelligence,yes,yes,yes,no,male,neither,15-10-1993,5,no,0.5,8,24:00,Good weather,Coffee,
-Artificial Intelligence,yes,no,yes,no,female,no idea,22-12-1993,3,no,1,8,22:45,Good weather,Coffee,
-Artificial Intelligence,yes,no,yes,yes,female,no idea,10-09-1995,2,no,1,7,22:00,Good weather ,Coffee,
-Business Analytics,yes,yes,yes,yes,female,fat,13-09-1995,7,no,0.25,8,23:00,Good weather ,Coffee,
-Computer Science,no,no,yes,yes,male,neither,14-10-1992,1,no,0.25,46371646292,01:48,Good breakfast,Achievement,
-Mathematics,yes,no,yes,no,male,neither,17-06-xxxx,5,no,100,10,01:30,Productive,Good food,
-Business Analytics,yes,yes,yes,yes,male,no idea,24-04-xxxx,6,no,0.4,9,01:15,Sports,Drinks,
-Artificial Intelligence,yes,yes,yes,yes,male,no idea,09-11-xxxx,3,yes,100,6.9,01:00,Sex,Drugs,
-Artificial Intelligence,no,yes,yes,yes,female,fat,10-01-1995,5,no,100,2,01:00,Good food,Good sleep,
-Computer Science,no,no,no,no,male,slim,22-05-1996,2,unknown,0.37,9,23:16,Good food,Fast train,
-Computational Science,yes,yes,yes,no,male,neither,17-05-1994,6,no,20,7,01:30,Coffee,Achievement,
-Econometrics and Operations Research,no,no,yes,no,male,fat,19-09-1993,4,no,0.33,8,01:30,Chocolate,Flying,
-Finance,no,no,yes,yes,male,no idea,18-03-xxxx,1,no,5,3,00:01,Good weather,Rain,
-Business Analytics,yes,yes,yes,no,female,fat,14-04-xxxx,2,no,10,9,22:20,Coffee,Food,
-Econometrics and Operations Research,no,no,yes,no,male,neither,22-08-1995,4,no,100,3,23:30,Good weather,Food,
-Computational Science,yes,no,yes,yes,male,neither,26-06-xxxx,5,no,0.25,9,01:00,Good weather,Food,
-Computational Science,no,no,yes,yes,female,slim,05-08-1995,7,no,10,7,01:30,Good weather ,Food,
-Business Analytics,yes,yes,yes,yes,male,slim,28-11-2018,8,no,0.9999987888,8,01:00,Music,Food,
-Finance,no,no,yes,no,male,neither,10-09-xxxx,8,no,5,6,00:30,Success,Food,
-Bioinformatics and Systems Biology,yes,yes,yes,yes,male,unknown,09-12-1994,2,no,0.3,1,02:00,Work,Food,
-Business Analytics,no,no,yes,no,male,no idea,15-08-1995,2,no,101,2,23:15,Holiday,Food,
-Computer Science,no,no,yes,yes,male,no idea,29-03-xxxx,3,no,25,7,03:00,Food,Football,
-Business Analytics,yes,no,yes,yes,female,fat,13-06-1994,2,no,5,7,23:00,Good weather,Free time,
-Artificial intelligence ,no,unknown,yes,unknown,female,neither,25-08-1996,0,no,1,3,00:00,Food,Free time,
-Finance,unknown,no,yes,no,male,neither,xx-xx-1994,0,no,50,3,23:00,Good weather,Free time,
-Bioinformatics and Systems Biology,yes,no,no,yes,female,neither,25-12-1994,300,no,20,1,00:00,Good weather,Free time,
-Business Analytics,yes,yes,yes,yes,female,fat,25-05-1995,1,no,50,8,23:00,Good weather,Free time,
-Business Analytics,yes,no,yes,yes,female,neither,19-03-1993,4,no,0.33,9,00:00,Good sleep,Free time,
-Computational Science,yes,yes,yes,yes,male,neither,09-11-1992,1,no,1,9,01:00,Good weather,Freedom,
-Finance,no,no,yes,no,male,fat,17-10-1992,1,no,0.25,7,00:30,No assigments,Freedom,
-Artificial Intelligence,no,no,yes,no,male,slim,09-11-xxxx,2,unknown,0.5,6123,23:30,Food,Friends,
-Bioinformatics and Systems Biology,yes,no,yes,no,male,fat,20-03-1995,2,no,0.25,10,12:20,Good dinner,Friends,
-Computational Science,yes,yes,yes,yes,male,slim,26-01-1994,6,unknown,0.25,3,00:45,Good weather,Friends,
-Business Analytics,yes,yes,yes,yes,female,no idea,03-10-xxxx,0,no,25,3,23:00,Good weather,Friends,
-Computational Science,no,no,yes,yes,male,fat,14-05-1994,5,yes,0.25,3,00:00,Good weather,Friends,
-Econometrics and Operations Research,no,no,yes,unknown,male,fat,02-09-1993,1,no,0.25,2,00:30,Good weather ,Fun,
-Artificial Intelligence,no,no,yes,no,male,neither,03-09-1994,4,no,27,8,02:00,Relief,Future plans being solid,
-Business Analytics,yes,yes,yes,yes,male,fat,16-10-1994,7,no,100,33,23:15,Sex,Gaming,
-Artificial Intelligence,yes,yes,no,no,male,fat,14-03-1981,20,no,100,1,00:30,Good sleep,Get satisfaction at work,
-Bioinformatics and Systems Biology,yes,no,yes,no,female,neither,11-02-1996,1,no,0.25,2,04:40,Morning tea,Getting to bed early,
-Artificial Intelligence,yes,no,yes,yes,male,neither,09-07-1994,1,no,1,10,00:00,Good sleep,Getting work done,
-Artificial Intelligence,yes,yes,yes,yes,female,fat,23-02-1995,2,no,0.5,34,23:30,Good sleep,Sport,
-Computer Science,yes,yes,yes,yes,male,fat,01-12-xxxx,5,no,0.4,69,02:30,Morning sex,Sport,
-Business Analytics,yes,no,yes,no,male,neither,30-12-1992,300,no,0.3,9,23:30,Wake up without an alarm,Sport,
-Artificial Intelligence,no,no,yes,no,male,neither,12-02-1993,3,no,3,7,02:00,No alarm,Good weather,
-Computational Science,no,no,yes,no,male,neither,27-01-1995,8,no,52.6,4,10:30,Free cheese,Good coffee,
-Computational Science,yes,no,yes,no,male,neither,31-12-1993,3,no,0.25,8,02:00,Friendly encounters,Good coffee,
-Artificial Intelligence,no,no,no,no,female,neither,10-03-1995,1,no,10,9,01:00,Good weather,Good coffee,
-Bioinformatics and Systems Biology,yes,no,yes,no,female,neither,24-10-1993,1,no,0.25,5,01:05,Good book,Good company,
-Mathematics,no,no,yes,no,female,no idea,24-09-1996,7,no,5,7,23:00,Good sleep,Good company,
-Mathematics,unknown,no,yes,no,male,neither,05-02-1988,8,no,50,3,23:58,Productive,Good company,
-Econometrics and Operations Research,no,no,yes,no,male,neither,10-12-1995,8,no,0.25,123581321,23:45,Sports,Good food,
-Business Analytics,yes,yes,yes,yes,male,fat,10-08-1995,400,no,0.25,4,23:55,Beer,Good food,
-Computational Science,no,no,yes,no,female,neither,03-11-xxxx,8,no,0.25,7,23:30,Good grade,Good food,
-Bioinformatics and Systems Biology,no,no,yes,no,male,fat,02-03-1996,6,no,10,2,23:30,Good sleep,Good food,
-Business Analytics,yes,no,yes,no,male,fat,29-07-xxxx,1,no,1,3,23:30,Good weather,Good food,
-Business Analytics,yes,no,yes,no,female,fat,24-11-1995,1,no,75,9,01:00,Good weather,Good food,
-Computational Science,yes,no,yes,no,male,neither,04-04-1990,8,no,0,4,11:49,Good weather,Good food,
-Computer Science,yes,yes,yes,yes,male,fat,05-04-1995,8,no,80,6,00:30,Good weather,Good food,
-Business Analytics,yes,yes,yes,yes,male,no idea,18-01-1997,5,unknown,100,7,00:30,Good weather,Good food,
-Artificial Intelligence,yes,yes,yes,no,male,no idea,04-11-1992,1,no,70,2,02:00,Sex,Good food,
-Bioinformatics and Systems Biology,yes,no,yes,no,female,fat,16-10-xxxx,8,no,2,37,00:30,Good weather,Good food,
-Business Analytics,yes,yes,yes,yes,male,neither,19-04-xxxx,7,no,0.456,4,01:12,Food,Good grade,
-Business Analytics,yes,yes,yes,yes,male,neither,02-09-1996,1,no,5,1,00:00,Sleep,Good news,
-Business Analytics,yes,yes,yes,yes,male,fat,xx-xx-1995,0,no,0,1,01:00,Good food,Good sex,
-Computer Science,no,no,yes,yes,male,fat,21-09-1994,8,unknown,10,4,01:30,Coffee,Good sleep,
-Business Analytics,yes,yes,yes,yes,male,fat,07-05-1994,6,no,0.25,9,00:30,Food,Good sleep,
-PhD,no,no,yes,no,male,neither,01-03-1995,2,no,0.25,7,23:30,Good food,Good sleep,
-Computer Science,no,yes,yes,no,male,neither,10-04-xxxx,3,no,1,42,22:30,Good sleep,Good sleep,
-Finance,no,no,yes,no,male,neither,10-12-1994,49000,no,0.05,7,01:00,Productive,Good sleep,
-Business Analytics,yes,yes,yes,yes,male,slim,24-08-1992,7,no,85,3,00:30,Sex,Good sleep,
-Artificial Intelligence,no,no,yes,yes,male,no idea,02-09-1990,4,no,5,7,01:15,Bunnies,Good weather,
-Business Analytics,yes,yes,yes,yes,female,fat,30-04-1994,6,no,25,8,23:15,Chocolate,Good weather,
-Bioinformatics and Systems Biology,yes,yes,yes,yes,female,neither,21-11-1993,280,no,0.3,1,23:30,Chocolate,Good weather,
-Finance,no,no,yes,no,male,no idea,03-12-1993,0,no,14,4,03:30,Coffee,Good weather,
-Human Movement Science,no,no,yes,no,female,no idea,28-05-1992,1,no,0.4,8,00:30,Coffee,Good weather,
-Artificial Intelligence,yes,yes,yes,yes,male,fat,02-07-1993,7,no,20,7,01:34,Coffee,Good weather,
-Artificial Intelligence,yes,no,yes,no,male,no idea,25-10-1990,4,no,15,1,23:00,Coffee,Good weather,
-Bioinformatics and Systems Biology,no,no,yes,yes,male,fat,14-12-1995,6,no,1,8,00:00,Rest,Good food,
-Computer Science,no,no,unknown,yes,male,no idea,06-08-1993,100,yes,unknown,394749,01:00,Good grade,Good grade,
-Science, Business & Innovation,no,no,unknown,yes,male,neither,25-02-1994,2,no,0.5,6,23:45,Good sleep,Free time
-Bioinformatics and Systems Biology,yes,no,yes,no,female,neither,05-08-1987,2,no,1,7,00:13,Good weather,Having the house quiet when I wake up,
-Artificial Intelligence,yes,yes,yes,yes,female,no idea,09-09-xxxx,6,no,50,9,23:14,Good weather,If I got up with the correct leg,
-Econometrics and Operations Research,no,no,yes,no,female,no idea,02-02-xxxx,4,no,1,1,22:30,Coffee,Laughing,
-Computer Science,yes,no,yes,yes,male,neither,18-09-xxxx,10,no,100,7,02:00,Achievement,Learning,
-Computer Science,yes,no,yes,yes,male,no idea,07-12-1995,2,no,200,2,23:20,Good food,Food,
-Econometrics and Operations Research,no,no,yes,no,female,fat,29-10-1991,1,no,0.25,3,01:20,Good food,Good company,
-Econometrics and Operations Research,no,yes,yes,no,male,fat,31-08-1994,1,no,100,8,12:00,Good weather,Food,
-Business Analytics,no,no,yes,no,male,fat,12-10-1994,315,no,1,10,01:00,Playing football,Good company,
-Bioinformatics and Systems Biology,no,no,no,no,female,neither,24-04-1995,2,no,10,10,00:00,Good weather,Good company,
-Computer Science,no,yes,yes,yes,male,no idea,02-04-1995,6,no,0.25,9,00:00,Cloudy skies  ,Memes,
-Econometrics and Operations Research,no,no,yes,no,male,fat,22-11-1991,3,no,2,2,02:00,Freedom,Money,
-Bioinformatics and Systems Biology,yes,yes,unknown,yes,male,slim,19-08-1993,7,no,0.3,5,02:00,Free time,Free time,
-Artificial Intelligence,yes,no,yes,yes,male,fat,18-08-1994,1,no,20,7,23:00,Coffee,Music,
-Artificial Intelligence,yes,yes,yes,yes,female,no idea,14-01-xxxx,3,no,0.3,347,02:00,Good weather ,Music,
-Finance,no,no,yes,yes,male,fat,03-04-1994,5,no,1,5,01:00,Food,Netflix,
-Business Analytics,yes,yes,yes,yes,female,no idea,22-01-xxxx,1,yes,100,7,01:30,Sleep,Netflix,
-Computer Science,no,yes,yes,no,male,fat,11-08-1992,2,no,1,8,01:00,Good food,New experiences,
-Artificial Intelligence,no,no,yes,no,male,neither,07-03-1995,6,no,0.25,6,23:45,Fun,Good food,
-Bioinformatics and Systems Biology,yes,no,no,no,female,slim,20-02-1995,2,no,5,33,00:00,Good sleep,Good food,
-Computer Science,no,no,yes,yes,male,neither,15-07-1996,10,no,1,6,01:00,People minding their own business,Good weather,
-Business Analytics,yes,no,yes,no,male,fat,01-09-1994,3,yes,200,1,00:00,Food,No college,
-Bioinformatics and Systems Biology,no,no,yes,yes,male,no idea,02-05-1996,7,no,3,3,00:00,Good sleep,No compile errors on first try,
-Bioinformatics and Systems Biology,yes,no,yes,no,male,fat,10-09-1996,4,no,0.5,2,02:00,Good weather,No lectures,
-Computational Science,yes,no,yes,no,male,no idea,07-06-1993,4,yes,0.33,42,23:15,No early lecture,No lectures,
-Management, Policy Analysis and Entrepreneurship,no,no,yes,unknown,male,neither,04-06-1992,4,no,100,4,11:00,Good weather,Free time
-Computational Science,yes,unknown,yes,yes,male,neither,xx-xx-1990,1,no,80,4,03:00,Productive,No pain,
-Artificial Intelligence,yes,yes,yes,no,female,neither,20-08-xxxx,A lot,no,5,2,01:15,Good weather,No school,
-Computer Science,no,no,yes,yes,female,no idea,12-10-1991,A lot ,no,100,3,03:00,Good food,No stress,
-Computer Science,no,no,yes,yes,male,fat,19-06-xxxx,5,yes,10,9,02:00,Good weather,No stress,
-Artificial Intelligence,no,no,yes,yes,female,no idea,11-11-xxxx,1,no,0.75,8,23:15,Laughing,No stress,
-Bioinformatics and Systems Biology,no,no,yes,no,female,fat,05-02-1994,1,no,0.25,7,23:30,Pancakes for breakfast,No wind,
-Artificial Intelligence,no,yes,yes,yes,female,neither,xx-xx-1991,1,no,1,9,03:00,Good weather,No work appointments,
-Business Analytics,yes,yes,yes,yes,male,no idea,27-03-xxxx,1,no,100,4,04:00,Sex,No worries,
-Econometrics and Operations Research,yes,yes,yes,yes,unknown,no idea,18-05-xxxx,8,unknown,1,3,23:00,Free time,Not it being bad,
-Computational Science,no,unknown,no,no,female,fat,02-07-xxxx,7,no,0.1,3,23:00,Good weather,Not studying,
-Mathematics,yes,no,unknown,yes,female,neither,01-06-1994,6,no,20,1,23:30,Things to do,Free time,
-Econometrics and Operations Research,no,no,no,no,male,fat,23-06-1994,7,no,1,4,11:30,Success,Free time,
-Artificial Intelligence,yes,no,yes,yes,male,no idea,30-01-1995,8,no,0.001,9,23:00,Coffee,Pizza,
-Artificial Intelligence,no,yes,yes,unknown,female,no idea,28-01-xxxx,1,no,1,7,23:03,Good weather,Pizza,
-Computational Science,no,no,yes,no,male,no idea,04-01-1996,7,unknown,0.25,6.28394957743736E+036,23:59,Pancakes,Pizza,
-Computer Science,no,no,yes,yes,male,slim,07-11-xxxx,6,no,100,2,22:00,Plenty food,Good sleep,
-Computational Science,yes,no,yes,yes,female,fat,12-07-1990,7,yes,2,2,01:15,Dance,Productive,
-Econometrics and Operations Research,no,no,yes,unknown,female,fat,23-12-1991,1,no,4,7,01:00,Free time,Productive,
-Econometrics and Operations Research,no,no,yes,no,male,neither,11-04-1931,2,no,0.25,78952097,01:00,Good weather,Rain,
-Business Analytics,yes,yes,yes,yes,male,fat,07-10-1994,3,no,80,6,01:00,Sleep,Relaxation,
-Econometrics and Operations Research,yes,yes,yes,no,male,fat,23-10-1994,10,no,100,1987,00:35,Achievement,Relaxation,
-Drug Discovery and Safety,no,no,yes,no,male,fat,17-08-1994,4,no,100,unknown,09:00,Chocolate,Relaxation,
-Artificial Intelligence,yes,yes,yes,yes,male,no idea,13-06-1993,420,no,99.99,9,01:00,Fun,Relaxation,
-Econometrics and Operations Research,no,no,yes,no,female,fat,04-04-xxxx,7,no,0,4,11:50,Good weather,Sea,
-Computational Science,yes,yes,yes,yes,male,neither,25-10-1996,1,no,101,4,03:20,Pizza,Seeing you,
-Business Analytics,yes,yes,yes,yes,male,no idea,27-12-1994,400,no,7,5,23:00,Beer,Sex,
-Artificial Intelligence,yes,yes,yes,yes,male,no idea,09-02-1993,6,no,50,9,03:30,Hanging out,Sex,
-Business Analytics,yes,yes,yes,yes,unknown,neither,06-09-1994,1,no,0.25,6,23:30,No school/work,Sex,
-Artificial Intelligence,yes,yes,yes,yes,female,neither,27-06-1995,9,no,0.25,5,01:00,Food,Sleep,
-Econometrics and Operations Research,no,no,yes,no,male,no idea,21-12-xxxx,5,no,1,0,unknown,Fox news,Sleep,
-Business Analytics,yes,yes,yes,yes,male,no idea,17-08-xxxx,1,no,10,2,23:00,Good weather,Sleep,
-Business Analytics,yes,yes,yes,yes,female,fat,23-02-1995,5,no,30,9,23:30,Good grade,Sleep well,
-Bioinformatics and Systems Biology,yes,no,no,no,male,neither,23-01-1994,6,no,0.25,4,01:30,No responsibilities,Sleeping in,
-Artificial Intelligence,yes,yes,yes,yes,male,neither,11-02-1994,7,no,1,3,03:00,Beer,Sport,
-Business Analytics,yes,yes,no,yes,male,neither,25-12-1992,5,no,unknown,6,23:00,Food,Sport,
-Computational Science,yes,no,yes,yes,female,fat,20-01-xxxx,3,no,0.05,1,01:00,Good sleep,Sport,
-Artificial Intelligence,yes,no,yes,no,male,neither,15-05-1994,5,no,10,32,00:40,Food,Sports,
-Artificial Intelligence,no,no,yes,no,male,fat,30-12-1990,5,no,50,6,03:00,Good sleep,Sports,
-Business Analytics,yes,no,yes,no,male,fat,07-07-1992,3,no,5,4,01:30,Sleep,Sports,
-Artificial Intelligence,yes,yes,yes,yes,male,no idea,31-07-1992,4,no,90,1,02:00,Sleep,Staying up late,
-Bioinformatics and Systems Biology,yes,no,yes,no,female,fat,12-04-1994,2,no,0.5,8,00:00,Food,Good weather,
-Business Analytics,yes,yes,yes,yes,male,no idea,15-02-xxxx,4,no,100,5,01:00,Good weather,Good weather,
-Artificial Intelligence,yes,yes,no,yes,female,fat,15-11-xxxx,8,no,50,7,00:25,Good weather ,Good weather,
-Artificial Intelligence,yes,yes,yes,no,female,fat,19-05-xxxx,1,no,0.25,22,02:00,Seeing friends,Good weather,
-Computational Science,no,no,no,no,male,slim,25-12-1991,7,no,0.34,7,02:00,Temptation Island,Good weather,
-Business Analytics,yes,yes,yes,yes,male,neither,13-12-1994,4,no,42,7,00:00,Laughing,Good weather,
-Artificial Intelligence,no,no,yes,no,male,neither,17-03-1992,6,no,unknown,7.44,01:00,Saturday,Sunday,
-Finance,no,no,yes,no,male,neither,17-03-1994,2,no,0.3,6,00:15,Saturday,Sunday,
-Econometrics and Operations Research,no,no,yes,no,female,no idea,16-05-1990,8,yes,0.003,8,00:00,Good coffee,Good weather,
-PhD,no,no,yes,no,female,fat,30-03-xxxx,0,no,1,6,10:30,Good sleep,Good weather,
-Artificial Intelligence,no,no,yes,no,female,no idea,05-11-1993,5,no,0.5,6,23:30,Puppies,Good weather,
-Artificial Intelligence,yes,yes,yes,yes,male,fat,23-01-xxxx,9,no,101,unknown,01:00,Not coming to VU,Sushi,
-Bioinformatics and Systems Biology,yes,no,yes,no,female,no idea,13-06-1993,4,no,5,3,02:00,Not having to get up early,Sushi,
-Artificial Intelligence,yes,yes,yes,no,male,fat,30-07-1992,8,no,11,2,04:00,Good company,Beer,
-Business Analytics,yes,yes,yes,yes,male,no idea,01-02-1995,2,no,0,8,00:30,unknown,unknown,
-Computational Science,yes,no,no,no,male,neither,07-08-xxxx,2,no,0,4,04:30,unknown,unknown,
-Economics,no,no,yes,no,female,neither,28-03-1995,2,no,0.25,7,23:00,unknown,unknown,
-Artificial Intelligence,yes,yes,yes,no,male,no idea,29-01-1996,2,no,6,5,02:00,unknown,unknown,
-Finance,no,no,yes,no,male,neither,24-05-1993,2,no,5,1,01:30,unknown,unknown,
-PhD,yes,no,yes,yes,male,fat,02-09-1990,2,no,0.25,3,23:00,Sex,Video games,
-Business Analytics,yes,yes,yes,yes,male,fat,09-03-1996,7,no,1,8,23:05,Coffee,Wake-up time,
-Artificial Intelligence,yes,yes,no,no,male,no idea,26-03-1993,8,yes,1,7,12:30,Productive,Watch a movie,
-Artificial Intelligence,no,no,yes,no,female,no idea,16-01-1995,2,no,0.4,7,03:00,Friends,Weather,
-Business Analytics,yes,no,yes,no,male,neither,04-07-1991,6,no,0.25,8,00:00,Sleep,Weather,
-Computational Science,yes,no,yes,no,male,neither,17-11-xxxx,3,no,1,10,01:00,Afternoon lectures,Weekend,
-Physics,no,yes,yes,no,male,neither,04-12-1991,5,no,0.4,10,01:30,Good company,Well rested and structured,
-Econometrics and Operations Research,yes,no,yes,no,male,no idea,02-04-xxxx,2,no,99,187,08:00,Food,Wine,
-Finance,no,no,yes,no,male,fat,28-06-xxxx,5,no,5,7,00:30,Good weather ,Winning the lottery,
+program,course_ml,course_ir,course_stat,course_db,gender,chocolate_effect,birthday,num_neighbors,stand_up,money,random_number,bed_time,good_day1,good_day2
+Finance,no,no,yes,no,male,neither,12-09-1996,1,no,0.5,9,01:30,Free time,unknown
+Business Analytics,yes,yes,no,yes,male,unknown,05-04-2000,400,unknown,25,7,04:00,unknown,unknown
+Artificial Intelligence,no,no,no,yes,male,no idea,30-12-1991,4,no,100,5,23:59,Fun,unknown
+Computer Science,yes,yes,yes,yes,male,fat,11-06-1993,10,no,40,8,23:00,Food,Sleep
+Econometrics and Operations Research,yes,yes,yes,yes,male,no idea,09-09-1994,1,no,100,7,23:30,Food,Sleep
+Business Analytics,yes,no,yes,yes,female,fat,27-09-1992,6,no,2,7,22:10,Food,Fun
+Artificial Intelligence,no,no,unknown,unknown,female,neither,20-05-1993,7,unknown,0,88,22:47,Weather,Work
+Econometrics and Operations Research,yes,yes,yes,yes,male,fat,05-11-1990,24,no,5,8,01:00,Sex,Food
+Bioinformatics and Systems Biology,yes,no,no,no,male,fat,22-09-1988,9,no,1,7,23:59,Food,Work
+Business Analytics,yes,yes,yes,no,male,slim,19-10-xxxx,2,no,110,unknown,23:30,Food,Beer
+Bioinformatics and Systems Biology,no,no,no,yes,female,fat,05-10-1987,7,no,1,13,01:30,Weather,Beer
+Computational Science,no,no,yes,yes,male,fat,07-11-1991,7,no,110,9293746289201,23:55,Weather,Beer
+Computer Science,no,no,yes,yes,male,neither,24-03-1994,1,no,1,7,unknown,Food,Beer
+Computer Science,no,no,no,yes,male,no idea,09-01-1994,6,no,0,8,00:00,Sleep,Beer
+Computational Science,no,no,yes,no,male,no idea,18-02-1994,7,no,10,75389275660,23:30,Sports,Work
+Business Analytics,no,no,yes,no,female,neither,18-02-1993,1,no,10,4,23:30,Food,Friends
+Artificial Intelligence,no,yes,yes,no,male,no idea,19-04-1989,7,no,0.25,9,23:45,Money,unknown
+Bioinformatics and Systems Biology,yes,no,yes,no,male,no idea,18-09-1991,6,no,1,8,00:00,Weather,Food
+Bioinformatics and Systems Biology,no,no,yes,yes,male,slim,05-02-1990,25,no,100,5,02:00,Music,Work
+Bioinformatics and Systems Biology,no,no,yes,no,male,fat,26-11-1993,1,no,5,382763,23:00,Sleep,Food
+Computer Science,yes,yes,yes,no,male,neither,27-09-1993,5,no,1,6739,23:00,Food,Food
+Bioinformatics and Systems Biology,no,no,no,no,male,fat,06-11-1992,2,no,1,537,02:30,Food,Food
+Econometrics and Operations Research,no,no,yes,no,male,neither,xx-xx-1995,3,no,10,8,00:02,Sports,Food
+Business Analytics,yes,yes,no,yes,unknown,fat,20-11-1995,2,yes,90,8,00:00,Sleep,Food
+Bioinformatics and Systems Biology,yes,no,yes,no,female,fat,16-01-1996,0,no,100,4578994211,23:00,Animals,Coffee
+Computer Science,no,no,yes,yes,female,slim,30-03-1995,6,no,1,42,23:45,Animals,Coffee
+Artificial Intelligence,yes,yes,yes,yes,male,fat,23-12-xxxx,5,no,1234,4,23:30,Food,Coffee
+Computational Science,no,no,yes,no,female,slim,08-08-1993,1,no,50,1,00:30,Friends,Coffee
+Artificial Intelligence,yes,yes,yes,no,male,neither,15-10-1993,5,no,0.5,8,24:00,Weather,Coffee
+Artificial Intelligence,yes,no,yes,no,female,no idea,22-12-1993,3,no,1,8,22:45,Weather,Coffee
+Artificial Intelligence,yes,no,yes,yes,female,no idea,10-09-1995,2,no,1,7,22:00,Weather,Coffee
+Business Analytics,yes,yes,yes,yes,female,fat,13-09-1995,7,no,0.25,8,23:00,Weather,Coffee
+Computer Science,no,no,yes,yes,male,neither,14-10-1992,1,no,0.25,46371646292,01:48,Food,Work
+Mathematics,yes,no,yes,no,male,neither,17-06-xxxx,5,no,100,10,01:30,Work,Food
+Business Analytics,yes,yes,yes,yes,male,no idea,24-04-xxxx,6,no,0.4,9,01:15,Sports,Beer
+Artificial Intelligence,yes,yes,yes,yes,male,no idea,09-11-xxxx,3,yes,100,6.9,01:00,Sex,unknown
+Artificial Intelligence,no,yes,yes,yes,female,fat,10-01-1995,5,no,100,2,01:00,Food,Sleep
+Computer Science,no,no,no,no,male,slim,22-05-1996,2,unknown,0.37,9,23:16,Food,unknown
+Computational Science,yes,yes,yes,no,male,neither,17-05-1994,6,no,20,7,01:30,Coffee,Work
+Econometrics and Operations Research,no,no,yes,no,male,fat,19-09-1993,4,no,0.33,8,01:30,Food,unknown
+Finance,no,no,yes,yes,male,no idea,18-03-xxxx,1,no,5,3,00:01,Weather,Weather
+Business Analytics,yes,yes,yes,no,female,fat,14-04-xxxx,2,no,10,9,22:20,Coffee,Food
+Econometrics and Operations Research,no,no,yes,no,male,neither,22-08-1995,4,no,100,3,23:30,Weather,Food
+Computational Science,yes,no,yes,yes,male,neither,26-06-xxxx,5,no,0.25,9,01:00,Weather,Food
+Computational Science,no,no,yes,yes,female,slim,05-08-1995,7,no,10,7,01:30,Weather,Food
+Business Analytics,yes,yes,yes,yes,male,slim,28-11-2018,8,no,0.9999987888,8,01:00,Music,Food
+Finance,no,no,yes,no,male,neither,10-09-xxxx,8,no,5,6,00:30,Work,Food
+Bioinformatics and Systems Biology,yes,yes,yes,yes,male,unknown,09-12-1994,2,no,0.3,1,02:00,Work,Food
+Business Analytics,no,no,yes,no,male,no idea,15-08-1995,2,no,101,2,23:15,Holiday,Food
+Computer Science,no,no,yes,yes,male,no idea,29-03-xxxx,3,no,25,7,03:00,Food,Sports
+Business Analytics,yes,no,yes,yes,female,fat,13-06-1994,2,no,5,7,23:00,Weather,Free time
+Artificial intelligence ,no,unknown,yes,unknown,female,neither,25-08-1996,0,no,1,3,00:00,Food,Free time
+Finance,unknown,no,yes,no,male,neither,xx-xx-1994,0,no,50,3,23:00,Weather,Free time
+Bioinformatics and Systems Biology,yes,no,no,yes,female,neither,25-12-1994,300,no,20,1,00:00,Weather,Free time
+Business Analytics,yes,yes,yes,yes,female,fat,25-05-1995,1,no,50,8,23:00,Weather,Free time
+Business Analytics,yes,no,yes,yes,female,neither,19-03-1993,4,no,0.33,9,00:00,Sleep,Free time
+Computational Science,yes,yes,yes,yes,male,neither,09-11-1992,1,no,1,9,01:00,Weather,Free time
+Finance,no,no,yes,no,male,fat,17-10-1992,1,no,0.25,7,00:30,Free time,Free time
+Artificial Intelligence,no,no,yes,no,male,slim,09-11-xxxx,2,unknown,0.5,6123,23:30,Food,Friends
+Bioinformatics and Systems Biology,yes,no,yes,no,male,fat,20-03-1995,2,no,0.25,10,12:20,Food,Friends
+Computational Science,yes,yes,yes,yes,male,slim,26-01-1994,6,unknown,0.25,3,00:45,Weather,Friends
+Business Analytics,yes,yes,yes,yes,female,no idea,03-10-xxxx,0,no,25,3,23:00,Weather,Friends
+Computational Science,no,no,yes,yes,male,fat,14-05-1994,5,yes,0.25,3,00:00,Weather,Friends
+Econometrics and Operations Research,no,no,yes,unknown,male,fat,02-09-1993,1,no,0.25,2,00:30,Weather,Fun
+Artificial Intelligence,no,no,yes,no,male,neither,03-09-1994,4,no,27,8,02:00,unknown,unknown
+Business Analytics,yes,yes,yes,yes,male,fat,16-10-1994,7,no,100,33,23:15,Sex,unknown
+Artificial Intelligence,yes,yes,no,no,male,fat,14-03-1981,20,no,100,1,00:30,Sleep,Work
+Bioinformatics and Systems Biology,yes,no,yes,no,female,neither,11-02-1996,1,no,0.25,2,04:40,Coffee,Sleep
+Artificial Intelligence,yes,no,yes,yes,male,neither,09-07-1994,1,no,1,10,00:00,Sleep,Work
+Artificial Intelligence,yes,yes,yes,yes,female,fat,23-02-1995,2,no,0.5,34,23:30,Sleep,Sports
+Computer Science,yes,yes,yes,yes,male,fat,01-12-xxxx,5,no,0.4,69,02:30,Sex,Sports
+Business Analytics,yes,no,yes,no,male,neither,30-12-1992,300,no,0.3,9,23:30,Free time,Sports
+Artificial Intelligence,no,no,yes,no,male,neither,12-02-1993,3,no,3,7,02:00,Free time,Weather
+Computational Science,no,no,yes,no,male,neither,27-01-1995,8,no,52.6,4,10:30,Food,Coffee
+Computational Science,yes,no,yes,no,male,neither,31-12-1993,3,no,0.25,8,02:00,Friends,Coffee
+Artificial Intelligence,no,no,no,no,female,neither,10-03-1995,1,no,10,9,01:00,Weather,Coffee
+Bioinformatics and Systems Biology,yes,no,yes,no,female,neither,24-10-1993,1,no,0.25,5,01:05,Free time,Friends
+Mathematics,no,no,yes,no,female,no idea,24-09-1996,7,no,5,7,23:00,Sleep,Friends
+Mathematics,unknown,no,yes,no,male,neither,05-02-1988,8,no,50,3,23:58,Work,Friends
+Econometrics and Operations Research,no,no,yes,no,male,neither,10-12-1995,8,no,0.25,123581321,23:45,Sports,Food
+Business Analytics,yes,yes,yes,yes,male,fat,10-08-1995,400,no,0.25,4,23:55,Beer,Food
+Computational Science,no,no,yes,no,female,neither,03-11-xxxx,8,no,0.25,7,23:30,Work,Food
+Bioinformatics and Systems Biology,no,no,yes,no,male,fat,02-03-1996,6,no,10,2,23:30,Sleep,Food
+Business Analytics,yes,no,yes,no,male,fat,29-07-xxxx,1,no,1,3,23:30,Weather,Food
+Business Analytics,yes,no,yes,no,female,fat,24-11-1995,1,no,75,9,01:00,Weather,Food
+Computational Science,yes,no,yes,no,male,neither,04-04-1990,8,no,0,4,11:49,Weather,Food
+Computer Science,yes,yes,yes,yes,male,fat,05-04-1995,8,no,80,6,00:30,Weather,Food
+Business Analytics,yes,yes,yes,yes,male,no idea,18-01-1997,5,unknown,100,7,00:30,Weather,Food
+Artificial Intelligence,yes,yes,yes,no,male,no idea,04-11-1992,1,no,70,2,02:00,Sex,Food
+Bioinformatics and Systems Biology,yes,no,yes,no,female,fat,16-10-xxxx,8,no,2,37,00:30,Weather,Food
+Business Analytics,yes,yes,yes,yes,male,neither,19-04-xxxx,7,no,0.456,4,01:12,Food,Work
+Business Analytics,yes,yes,yes,yes,male,neither,02-09-1996,1,no,5,1,00:00,Sleep,unknown
+Business Analytics,yes,yes,yes,yes,male,fat,xx-xx-1995,0,no,0,1,01:00,Food,Sex
+Computer Science,no,no,yes,yes,male,fat,21-09-1994,8,unknown,10,4,01:30,Coffee,Sleep
+Business Analytics,yes,yes,yes,yes,male,fat,07-05-1994,6,no,0.25,9,00:30,Food,Sleep
+PhD,no,no,yes,no,male,neither,01-03-1995,2,no,0.25,7,23:30,Food,Sleep
+Computer Science,no,yes,yes,no,male,neither,10-04-xxxx,3,no,1,42,22:30,Sleep,Sleep
+Finance,no,no,yes,no,male,neither,10-12-1994,49000,no,0.05,7,01:00,Work,Sleep
+Business Analytics,yes,yes,yes,yes,male,slim,24-08-1992,7,no,85,3,00:30,Sex,Sleep
+Artificial Intelligence,no,no,yes,yes,male,no idea,02-09-1990,4,no,5,7,01:15,Animals,Weather
+Business Analytics,yes,yes,yes,yes,female,fat,30-04-1994,6,no,25,8,23:15,Food,Weather
+Bioinformatics and Systems Biology,yes,yes,yes,yes,female,neither,21-11-1993,280,no,0.3,1,23:30,Food,Weather
+Finance,no,no,yes,no,male,no idea,03-12-1993,0,no,14,4,03:30,Coffee,Weather
+Human Movement Science,no,no,yes,no,female,no idea,28-05-1992,1,no,0.4,8,00:30,Coffee,Weather
+Artificial Intelligence,yes,yes,yes,yes,male,fat,02-07-1993,7,no,20,7,01:34,Coffee,Weather
+Artificial Intelligence,yes,no,yes,no,male,no idea,25-10-1990,4,no,15,1,23:00,Coffee,Weather
+Bioinformatics and Systems Biology,no,no,yes,yes,male,fat,14-12-1995,6,no,1,8,00:00,Sleep,Food
+Computer Science,no,no,unknown,yes,male,no idea,06-08-1993,100,yes,unknown,394749,01:00,Work,Work
+Science Business & Innovation,Sl,no,unknown,yes,male,neither,25-02-1994,2,no,0.5,6,23:45,Sleep,Free time
+Bioinformatics and Systems Biology,yes,no,yes,no,female,neither,05-08-1987,2,no,1,7,00:13,Weather,unknown
+Artificial Intelligence,yes,yes,yes,yes,female,no idea,09-09-xxxx,6,no,50,9,23:14,Weather,unknown
+Econometrics and Operations Research,no,no,yes,no,female,no idea,02-02-xxxx,4,no,1,1,22:30,Coffee,Fun
+Computer Science,yes,no,yes,yes,male,neither,18-09-xxxx,10,no,100,7,02:00,Work,Work
+Computer Science,yes,no,yes,yes,male,no idea,07-12-1995,2,no,200,2,23:20,Food,Food
+Econometrics and Operations Research,no,no,yes,no,female,fat,29-10-1991,1,no,0.25,3,01:20,Food,Friends
+Econometrics and Operations Research,no,yes,yes,no,male,fat,31-08-1994,1,no,100,8,12:00,Weather,Food
+Business Analytics,no,no,yes,no,male,fat,12-10-1994,315,no,1,10,01:00,Sports,Friends
+Bioinformatics and Systems Biology,no,no,no,no,female,neither,24-04-1995,2,no,10,10,00:00,Weather,Friends
+Computer Science,no,yes,yes,yes,male,no idea,02-04-1995,6,no,0.25,9,00:00,Weather,Fun
+Econometrics and Operations Research,no,no,yes,no,male,fat,22-11-1991,3,no,2,2,02:00,Free time,unknown
+Bioinformatics and Systems Biology,yes,yes,unknown,yes,male,slim,19-08-1993,7,no,0.3,5,02:00,Free time,Free time
+Artificial Intelligence,yes,no,yes,yes,male,fat,18-08-1994,1,no,20,7,23:00,Coffee,unknown
+Artificial Intelligence,yes,yes,yes,yes,female,no idea,14-01-xxxx,3,no,0.3,347,02:00,Weather,unknown
+Finance,no,no,yes,yes,male,fat,03-04-1994,5,no,1,5,01:00,Food,TV
+Business Analytics,yes,yes,yes,yes,female,no idea,22-01-xxxx,1,yes,100,7,01:30,Sleep,TV
+Computer Science,no,yes,yes,no,male,fat,11-08-1992,2,no,1,8,01:00,Food,unknown
+Artificial Intelligence,no,no,yes,no,male,neither,07-03-1995,6,no,0.25,6,23:45,Fun,Food
+Bioinformatics and Systems Biology,yes,no,no,no,female,slim,20-02-1995,2,no,5,33,00:00,Sleep,Food
+Computer Science,no,no,yes,yes,male,neither,15-07-1996,10,no,1,6,01:00,unknown,Weather
+Business Analytics,yes,no,yes,no,male,fat,01-09-1994,3,yes,200,1,00:00,Food,Free time
+Bioinformatics and Systems Biology,no,no,yes,yes,male,no idea,02-05-1996,7,no,3,3,00:00,Sleep,Work
+Bioinformatics and Systems Biology,yes,no,yes,no,male,fat,10-09-1996,4,no,0.5,2,02:00,Weather,Free time
+Computational Science,yes,no,yes,no,male,no idea,07-06-1993,4,yes,0.33,42,23:15,Free time,Free time
+ Management Policy Analysis and Entrepreneurship,no,no,yes,unknown,male,neither,04-06-1992,4,no,100,4,11:00,Weather,Free time
+Computational Science,yes,unknown,yes,yes,male,neither,xx-xx-1990,1,no,80,4,03:00,Work,unknown
+Artificial Intelligence,yes,yes,yes,no,female,neither,20-08-xxxx,A lot,no,5,2,01:15,Weather,Free time
+Computer Science,no,no,yes,yes,female,no idea,12-10-1991,A lot ,no,100,3,03:00,Food,Free time
+Computer Science,no,no,yes,yes,male,fat,19-06-xxxx,5,yes,10,9,02:00,Weather,Free time
+Artificial Intelligence,no,no,yes,yes,female,no idea,11-11-xxxx,1,no,0.75,8,23:15,Fun,Free time
+Bioinformatics and Systems Biology,no,no,yes,no,female,fat,05-02-1994,1,no,0.25,7,23:30,Food,Weather
+Artificial Intelligence,no,yes,yes,yes,female,neither,xx-xx-1991,1,no,1,9,03:00,Weather,Free time
+Business Analytics,yes,yes,yes,yes,male,no idea,27-03-xxxx,1,no,100,4,04:00,Sex,Free time
+Econometrics and Operations Research,yes,yes,yes,yes,unknown,no idea,18-05-xxxx,8,unknown,1,3,23:00,Free time,unknown
+Computational Science,no,unknown,no,no,female,fat,02-07-xxxx,7,no,0.1,3,23:00,Weather,Free time
+Mathematics,yes,no,unknown,yes,female,neither,01-06-1994,6,no,20,1,23:30,Work,Free time
+Econometrics and Operations Research,no,no,no,no,male,fat,23-06-1994,7,no,1,4,11:30,Work,Free time
+Artificial Intelligence,yes,no,yes,yes,male,no idea,30-01-1995,8,no,0.001,9,23:00,Coffee,Food
+Artificial Intelligence,no,yes,yes,unknown,female,no idea,28-01-xxxx,1,no,1,7,23:03,Weather,Food
+Computational Science,no,no,yes,no,male,no idea,04-01-1996,7,unknown,0.25,6.28394957743736E+036,23:59,Food,Food
+Computer Science,no,no,yes,yes,male,slim,07-11-xxxx,6,no,100,2,22:00,Food,Sleep
+Computational Science,yes,no,yes,yes,female,fat,12-07-1990,7,yes,2,2,01:15,Sports,Work
+Econometrics and Operations Research,no,no,yes,unknown,female,fat,23-12-1991,1,no,4,7,01:00,Free time,Work
+Econometrics and Operations Research,no,no,yes,no,male,neither,11-04-1931,2,no,0.25,78952097,01:00,Weather,Weather
+Business Analytics,yes,yes,yes,yes,male,fat,07-10-1994,3,no,80,6,01:00,Sleep,Free time
+Econometrics and Operations Research,yes,yes,yes,no,male,fat,23-10-1994,10,no,100,1987,00:35,Work,Free time
+Drug Discovery and Safety,no,no,yes,no,male,fat,17-08-1994,4,no,100,unknown,09:00,Food,Free time
+Artificial Intelligence,yes,yes,yes,yes,male,no idea,13-06-1993,420,no,99.99,9,01:00,Fun,Free time
+Econometrics and Operations Research,no,no,yes,no,female,fat,04-04-xxxx,7,no,0,4,11:50,Weather,unknown
+Computational Science,yes,yes,yes,yes,male,neither,25-10-1996,1,no,101,4,03:20,Food,Friends
+Business Analytics,yes,yes,yes,yes,male,no idea,27-12-1994,400,no,7,5,23:00,Beer,Sex
+Artificial Intelligence,yes,yes,yes,yes,male,no idea,09-02-1993,6,no,50,9,03:30,Friends,Sex
+Business Analytics,yes,yes,yes,yes,unknown,neither,06-09-1994,1,no,0.25,6,23:30,Free time,Sex
+Artificial Intelligence,yes,yes,yes,yes,female,neither,27-06-1995,9,no,0.25,5,01:00,Food,Sleep
+Econometrics and Operations Research,no,no,yes,no,male,no idea,21-12-xxxx,5,no,1,0,unknown,TV,Sleep
+Business Analytics,yes,yes,yes,yes,male,no idea,17-08-xxxx,1,no,10,2,23:00,Weather,Sleep
+Business Analytics,yes,yes,yes,yes,female,fat,23-02-1995,5,no,30,9,23:30,Work,Sleep
+Bioinformatics and Systems Biology,yes,no,no,no,male,neither,23-01-1994,6,no,0.25,4,01:30,Free time,Sleep
+Artificial Intelligence,yes,yes,yes,yes,male,neither,11-02-1994,7,no,1,3,03:00,Beer,Sports
+Business Analytics,yes,yes,no,yes,male,neither,25-12-1992,5,no,unknown,6,23:00,Food,Sports
+Computational Science,yes,no,yes,yes,female,fat,20-01-xxxx,3,no,0.05,1,01:00,Sleep,Sports
+Artificial Intelligence,yes,no,yes,no,male,neither,15-05-1994,5,no,10,32,00:40,Food,Sports
+Artificial Intelligence,no,no,yes,no,male,fat,30-12-1990,5,no,50,6,03:00,Sleep,Sports
+Business Analytics,yes,no,yes,no,male,fat,07-07-1992,3,no,5,4,01:30,Sleep,Sports
+Artificial Intelligence,yes,yes,yes,yes,male,no idea,31-07-1992,4,no,90,1,02:00,Sleep,Free time
+Bioinformatics and Systems Biology,yes,no,yes,no,female,fat,12-04-1994,2,no,0.5,8,00:00,Food,Weather
+Business Analytics,yes,yes,yes,yes,male,no idea,15-02-xxxx,4,no,100,5,01:00,Weather,Weather
+Artificial Intelligence,yes,yes,no,yes,female,fat,15-11-xxxx,8,no,50,7,00:25,Weather,Weather
+Artificial Intelligence,yes,yes,yes,no,female,fat,19-05-xxxx,1,no,0.25,22,02:00,Friends,Weather
+Computational Science,no,no,no,no,male,slim,25-12-1991,7,no,0.34,7,02:00,TV,Weather
+Business Analytics,yes,yes,yes,yes,male,neither,13-12-1994,4,no,42,7,00:00,Fun,Weather
+Artificial Intelligence,no,no,yes,no,male,neither,17-03-1992,6,no,unknown,7.44,01:00,Free time,Free time
+Finance,no,no,yes,no,male,neither,17-03-1994,2,no,0.3,6,00:15,Free time,Free time
+Econometrics and Operations Research,no,no,yes,no,female,no idea,16-05-1990,8,yes,0.003,8,00:00,Coffee,Weather
+PhD,no,no,yes,no,female,fat,30-03-xxxx,0,no,1,6,10:30,Sleep,Weather
+Artificial Intelligence,no,no,yes,no,female,no idea,05-11-1993,5,no,0.5,6,23:30,Animals,Weather
+Artificial Intelligence,yes,yes,yes,yes,male,fat,23-01-xxxx,9,no,101,unknown,01:00,Free time,Food
+Bioinformatics and Systems Biology,yes,no,yes,no,female,no idea,13-06-1993,4,no,5,3,02:00,Free time,Food
+Artificial Intelligence,yes,yes,yes,no,male,fat,30-07-1992,8,no,11,2,04:00,Friends,Beer
+Business Analytics,yes,yes,yes,yes,male,no idea,01-02-1995,2,no,0,8,00:30,unknown,unknown
+Computational Science,yes,no,no,no,male,neither,07-08-xxxx,2,no,0,4,04:30,unknown,unknown
+Economics,no,no,yes,no,female,neither,28-03-1995,2,no,0.25,7,23:00,unknown,unknown
+Artificial Intelligence,yes,yes,yes,no,male,no idea,29-01-1996,2,no,6,5,02:00,unknown,unknown
+Finance,no,no,yes,no,male,neither,24-05-1993,2,no,5,1,01:30,unknown,unknown
+PhD,yes,no,yes,yes,male,fat,02-09-1990,2,no,0.25,3,23:00,Sex,unknown
+Business Analytics,yes,yes,yes,yes,male,fat,09-03-1996,7,no,1,8,23:05,Coffee,Sleep
+Artificial Intelligence,yes,yes,no,no,male,no idea,26-03-1993,8,yes,1,7,12:30,Work,TV
+Artificial Intelligence,no,no,yes,no,female,no idea,16-01-1995,2,no,0.4,7,03:00,Friends,Weather
+Business Analytics,yes,no,yes,no,male,neither,04-07-1991,6,no,0.25,8,00:00,Sleep,Weather
+Computational Science,yes,no,yes,no,male,neither,17-11-xxxx,3,no,1,10,01:00,Free time,Free time
+Physics,no,yes,yes,no,male,neither,04-12-1991,5,no,0.4,10,01:30,Friends,Sleep
+Econometrics and Operations Research,yes,no,yes,no,male,no idea,02-04-xxxx,2,no,99,187,08:00,Food,unknown
+Finance,no,no,yes,no,male,fat,28-06-xxxx,5,no,5,7,00:30,Weather,unknown
