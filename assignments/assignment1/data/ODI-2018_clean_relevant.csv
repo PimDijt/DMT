@@ -21,7 +21,7 @@ Business Analytics,yes,yes,yes,yes,male,fat,no,0.25,23:55,Beer,Food
 Business Analytics,yes,yes,yes,no,female,fat,no,10,22:20,Coffee,Food
 Artificial Intelligence,yes,no,yes,yes,male,no idea,no,0.001,23:00,Coffee,Food
 Computer Science,yes,yes,yes,no,male,neither,no,1,23:00,Food,Food
-Bioinformatics and Systems Biology,no,no,no,no,male,fat,no,1,02:30,Food,Food
+Bioinformatics and Systems Biology,no,no,no,no,male,fat,no,1,02:30,unknown,Food
 Computer Science,yes,no,yes,yes,male,no idea,no,200,23:20,Food,Food
 Computational Science,no,no,yes,no,male,no idea,unknown,0.25,23:59,Food,Food
 Artificial Intelligence,yes,yes,yes,yes,male,fat,no,101,01:00,Free time,Food
