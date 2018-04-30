@@ -32,7 +32,6 @@ Business Analytics,yes,yes,yes,yes,male,slim,no,0.9999987888,01:00,unknown,Food
 Econometrics and Operations Research,yes,yes,yes,yes,male,fat,no,5,01:00,Sex,Food
 Artificial Intelligence,yes,yes,yes,no,male,no idea,no,70,02:00,Sex,Food
 Bioinformatics and Systems Biology,no,no,yes,no,male,fat,no,5,23:00,Sleep,Food
-Business Analytics,yes,yes,no,yes,unknown,fat,yes,90,00:00,Sleep,Food
 Bioinformatics and Systems Biology,no,no,yes,no,male,fat,no,10,23:30,Sleep,Food
 Bioinformatics and Systems Biology,no,no,yes,yes,male,fat,no,1,00:00,Sleep,Food
 Bioinformatics and Systems Biology,yes,no,no,no,female,slim,no,5,00:00,Sleep,Food
@@ -104,7 +103,6 @@ Econometrics and Operations Research,no,no,yes,unknown,male,fat,no,0.25,00:30,We
 Computer Science,no,yes,yes,yes,male,no idea,no,0.25,00:00,Weather,Fun
 Business Analytics,yes,yes,yes,yes,male,no idea,no,7,23:00,Beer,Sex
 Business Analytics,yes,yes,yes,yes,male,fat,no,0,01:00,Food,Sex
-Business Analytics,yes,yes,yes,yes,unknown,neither,no,0.25,23:30,Free time,Sex
 Artificial Intelligence,yes,yes,yes,yes,male,no idea,no,50,03:30,Friends,Sex
 Bioinformatics and Systems Biology,yes,no,yes,no,female,neither,no,0.25,04:40,Coffee,Sleep
 Computer Science,no,no,yes,yes,male,fat,unknown,10,01:30,Coffee,Sleep
@@ -144,7 +142,6 @@ Computer Science,no,yes,yes,no,male,fat,no,1,01:00,Food,unknown
 Econometrics and Operations Research,yes,no,yes,no,male,no idea,no,99,08:00,Food,unknown
 Finance,no,no,yes,no,male,neither,no,0.5,01:30,Free time,unknown
 Econometrics and Operations Research,no,no,yes,no,male,fat,no,2,02:00,Free time,unknown
-Econometrics and Operations Research,yes,yes,yes,yes,unknown,no idea,unknown,1,23:00,Free time,unknown
 Artificial Intelligence,no,no,no,yes,male,no idea,no,100,23:59,Fun,unknown
 Artificial Intelligence,no,yes,yes,no,male,no idea,no,0.25,23:45,unknown,unknown
 Artificial Intelligence,yes,yes,yes,yes,male,no idea,yes,100,01:00,Sex,unknown
