@@ -1,0 +1,6 @@
+{
+    "model_path":      "output/Models/basicPythonBenchmark.pickle",
+    "submission_path": "output/Submissions/basicPythonBenchmark.csv",
+    "train_path":      "../data/training_set_VU_DM_2014.csv",
+    "test_path":       "../data/test_set_VU_DM_2014.csv"
+}
