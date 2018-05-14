@@ -43,11 +43,11 @@ def make_length(length):
         return "month"
 
 feature_columns = [
-    #"srch_id",
+    "srch_id",
     #"date_time",
     "site_id",
     "visitor_location_country_id",
-    #"visitor_hist_starrating",
+    "visitor_hist_starrating",
     #"visitor_hist_adr_usd",
     "prop_country_id",
     "prop_id",
@@ -115,12 +115,12 @@ added_features = [
 
 training_data = []
 target_data = []
-with open('data/training_500K.csv', newline='') as csvfile:
+with open('data/training_100K.csv', newline='') as csvfile:
     training = csv.reader(csvfile, delimiter=',')
     columns = next(training)
 
     for row in training:
-        
+        #if row[columns.index("booking_bool")] != "0" or row[columns.index("booking_bool")] != "0":
         extra_features = []
 
         #change the date, maybe add weekend?
@@ -176,7 +176,7 @@ with open('data/training_500K.csv', newline='') as csvfile:
             if not comp_rate == "NULL":
                 comp_score += int(comp_rate)
         extra_features.append(comp_score)
-        
+
         #make the feature!
         result_dict = {}
         for feature in feature_columns:
@@ -199,8 +199,8 @@ with open('data/training_500K.csv', newline='') as csvfile:
         target_data.append(target_dict)
 
 
-with open('feature_dict', 'wb') as fp:
+with open('feature_dict_100K', 'wb') as fp:
     pickle.dump(training_data, fp)
 
-with open('target_dict', 'wb') as fp:
+with open('target_dict_100K', 'wb') as fp:
     pickle.dump(target_data, fp)
