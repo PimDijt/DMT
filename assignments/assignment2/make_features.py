@@ -93,7 +93,7 @@ feature_columns = [
     #"comp8_rate",
     #"comp8_inv",
     #"comp8_rate_percent_diff",
-    "gross_bookings_usd",
+    #"gross_bookings_usd",
 ]
 
 targets = [
