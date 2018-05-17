@@ -2,4 +2,5 @@
 .DS_STORE
 *.dict
 /assignments/assignment2/data/*
+/assignments/assignment2/__pycache__
 /assignments/assignment2/PythonBenchmark/Output/*
