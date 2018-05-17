@@ -1,0 +1,20 @@
+Neural net, 1 layers of size 50:
+0.41 0.39 0.39 0.40 0.38 0.39 0.39 0.37 0.49 0.41 
+Average: 0.40
+
+Neural net, 2 layers of size 50:
+0.43 0.41 0.39 0.60 0.39 0.39 0.39 0.38 0.40 0.40 
+Average: 0.42
+
+Neural net, 3 layers of size 50:
+0.81 0.74 0.37 0.38 0.40 0.80 0.82 0.38 0.57 0.39 
+Average: 0.57
+
+Neural net, 4 layers of size 50:
+0.41 0.39 0.39 0.38 0.39 0.39 0.40 0.38 0.40 0.79 
+Average: 0.43
+
+Neural net, 5 layers of size 50:
+0.39 0.40 0.40 0.79 0.38 0.70 0.40 0.75 0.78 0.40 
+Average: 0.54
+
