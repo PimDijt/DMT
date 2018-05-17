@@ -1,5 +1,5 @@
 .ipynb_checkpoints/
 .DS_STORE
-
+*.dict
 /assignments/assignment2/data/*
 /assignments/assignment2/PythonBenchmark/Output/*

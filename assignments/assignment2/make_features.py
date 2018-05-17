@@ -199,8 +199,8 @@ with open('data/training_100K.csv', newline='') as csvfile:
         target_data.append(target_dict)
 
 
-with open('feature_dict_100K', 'wb') as fp:
+with open('feature_dict_100K.dict', 'wb') as fp:
     pickle.dump(training_data, fp)
 
-with open('target_dict_100K', 'wb') as fp:
+with open('target_dict_100K.dict', 'wb') as fp:
     pickle.dump(target_data, fp)
