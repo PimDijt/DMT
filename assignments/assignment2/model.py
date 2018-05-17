@@ -149,7 +149,7 @@ layers = [1,2,3,4,5]
 for l in layers:
     t = ()
     for i in range(0,l):
-        t += (100,)
-    print("Neural net, {} layers of size 100:".format(l))
+        t += (50,)
+    print("Neural net, {} layers of size 50:".format(l))
     net = MultiOutputClassifier(MLPClassifier(hidden_layer_sizes=t, random_state=1))
     cross_validate(net, training_data, target_data, search_amount, n_folds=10)
