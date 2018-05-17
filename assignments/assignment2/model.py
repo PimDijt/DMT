@@ -145,11 +145,11 @@ def calc_max(targets):
         score += 1 / math.log2(i+1)
     return score
 
-layers = [1,2,3,4,5]
+layers = [1,2,3,4,5,6,7,8,9,10]
 for l in layers:
     t = ()
     for i in range(0,l):
-        t += (50,)
-    print("Neural net, {} layers of size 50:".format(l))
+        t += (20,)
+    print("Neural net, {} layers of size 20:".format(l))
     net = MultiOutputClassifier(MLPClassifier(hidden_layer_sizes=t, random_state=1))
     cross_validate(net, training_data, target_data, search_amount, n_folds=10)
