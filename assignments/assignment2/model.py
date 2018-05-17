@@ -144,10 +144,6 @@ def calc_max(targets):
         score += 1 / math.log2(i+1)
     return score
 
-parameters = [20, 40, 60, 80, 100]
-
-for p in parameters:
-    print("Random Tree:")
-    print("{} estimators:".format(p))
-    forest = MultiOutputClassifier(GradientBoostingClassifier(n_estimators=p, random_state=1))
-    cross_validate(forest, training_data, target_data, search_amount, n_folds=10)
+print("Gradient Boosting")
+boost = MultiOutputClassifier(GradientBoostingClassifier(random_state=1))
+cross_validate(boost, training_data, target_data, search_amount, n_folds=10)
