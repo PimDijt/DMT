@@ -10,6 +10,7 @@ from sklearn.feature_selection import f_classif, SelectPercentile, VarianceThres
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.neural_network import MLPClassifier
+from sklearn.ensemble import AdaBoostClassifier
 from sklearn.base import clone
 
 with open ('feature_dict_100K.dict', 'rb') as fp:
@@ -145,7 +146,12 @@ def calc_max(targets):
         score += 1 / math.log2(i+1)
     return score
 
-layers = [1,2,3,4,5,6,7,8,9,10]
+parameters = [20,40,60,80,100]
+for p in parameters:
+    print("Ada boost, estimators: {}".format(p))
+    ada = MultiOutputClassifier(AdaBoostClassifier(n_estimators=p, random_state=1))
+    cross_validate(ada, training_data, target_data, search_amount, n_folds=10)
+'''
 for l in layers:
     t = ()
     for i in range(0,l):
@@ -153,3 +159,4 @@ for l in layers:
     print("Neural net, {} layers of size 20:".format(l))
     net = MultiOutputClassifier(MLPClassifier(hidden_layer_sizes=t, random_state=1))
     cross_validate(net, training_data, target_data, search_amount, n_folds=10)
+'''
