@@ -9,6 +9,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import f_classif, SelectPercentile, VarianceThreshold
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.neural_network import MLPClassifier
 from sklearn.base import clone
 
 with open ('feature_dict_100K.dict', 'rb') as fp:
@@ -144,6 +145,11 @@ def calc_max(targets):
         score += 1 / math.log2(i+1)
     return score
 
-print("Gradient Boosting")
-boost = MultiOutputClassifier(GradientBoostingClassifier(random_state=1))
-cross_validate(boost, training_data, target_data, search_amount, n_folds=10)
+layers = [1,2,3,4,5]
+for l in layers:
+    t = ()
+    for i in range(0,l):
+        t += (100,)
+    print("Neural net, {} layers of size 100:".format(l))
+    net = MultiOutputClassifier(MLPClassifier(hidden_layer_sizes=t, random_state=1))
+    cross_validate(net, training_data, target_data, search_amount, n_folds=10)
