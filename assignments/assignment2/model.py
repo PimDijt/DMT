@@ -9,10 +9,10 @@ from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import f_classif, SelectPercentile, VarianceThreshold
 from sklearn.base import clone
 
-with open ('feature_dict_100K', 'rb') as fp:
+with open ('feature_dict_100K.dict', 'rb') as fp:
     training_data = pickle.load(fp)
 
-with open ('target_dict_100K', 'rb') as fp:
+with open ('target_dict_100K.dict', 'rb') as fp:
     target_data = pickle.load(fp)
 
 training_vec = DictVectorizer()
@@ -35,7 +35,7 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
         slice_size = search_amount / n_folds
     scores = []
     for i in range(0,n_folds):
-        print("Fold: {}".format(i+1))
+        #print("Fold: {}".format(i+1))
         training_data = []
         training_targets = []
         test_data = []
@@ -75,7 +75,9 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
 
         score = assess_model(fold_model, test_data, test_targets)
         scores.append(score)
-    print("Average: {}".format(sum(scores)/len(scores)))
+    for s in scores:
+        print("{0:.2f}".format(s), end=" ")
+    print("\nAverage: {0:.2f}\n".format(sum(scores)/len(scores)))
 
 
 
@@ -96,7 +98,7 @@ def assess_model(multi_target_forest, test_data, test_targets):
         else:
             cur_search.append(test_data[i])
             cur_targets.append(list(test_targets[i]))
-    print("Score: {}".format(sum(scores)/len(scores)))
+    #print("Score: {}".format(sum(scores)/len(scores)))
     return sum(scores)/len(scores)
 
 def assess_search(multi_target_forest, search, targets):
@@ -140,6 +142,10 @@ def calc_max(targets):
         score += 1 / math.log2(i+1)
     return score
 
+parameters = [20, 40, 60, 80, 100]
 
-forest = MultiOutputClassifier(RandomForestClassifier(n_estimators=100, random_state=1))
-cross_validate(forest, training_data, target_data, search_amount, n_folds=10)
+for p in parameters:
+    print("Random Tree:")
+    print("{} estimators:".format(p))
+    forest = MultiOutputClassifier(RandomForestClassifier(n_estimators=p, random_state=1))
+    cross_validate(forest, training_data, target_data, search_amount, n_folds=10)
