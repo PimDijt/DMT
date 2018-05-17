@@ -1,0 +1,25 @@
+Random Tree:
+20 estimators:
+0.44 0.44 0.47 0.45 0.46 0.44 0.46 0.45 0.44 0.45 
+Average: 0.45
+
+Random Tree:
+40 estimators:
+0.42 0.42 0.46 0.43 0.44 0.42 0.45 0.42 0.43 0.45 
+Average: 0.43
+
+Random Tree:
+60 estimators:
+0.42 0.41 0.45 0.42 0.43 0.41 0.43 0.43 0.43 0.45 
+Average: 0.43
+
+Random Tree:
+80 estimators:
+0.42 0.41 0.45 0.43 0.43 0.42 0.45 0.42 0.43 0.45 
+Average: 0.43
+
+Random Tree:
+100 estimators:
+0.42 0.42 0.45 0.42 0.43 0.41 0.44 0.43 0.43 0.45 
+Average: 0.43
+
