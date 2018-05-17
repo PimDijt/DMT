@@ -8,6 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import f_classif, SelectPercentile, VarianceThreshold
 from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.base import clone
 
 with open ('feature_dict_100K.dict', 'rb') as fp:
@@ -148,5 +149,5 @@ parameters = [20, 40, 60, 80, 100]
 for p in parameters:
     print("Random Tree:")
     print("{} estimators:".format(p))
-    forest = MultiOutputClassifier(ExtraTreesClassifier(n_estimators=p, random_state=1))
+    forest = MultiOutputClassifier(GradientBoostingClassifier(n_estimators=p, random_state=1))
     cross_validate(forest, training_data, target_data, search_amount, n_folds=10)
