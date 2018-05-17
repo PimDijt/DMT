@@ -7,7 +7,7 @@ from sklearn.multioutput import MultiOutputClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import f_classif, SelectPercentile, VarianceThreshold
-form sklearn.ensemble import ExtraTreesClassifier
+from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.base import clone
 
 with open ('feature_dict_100K.dict', 'rb') as fp:
