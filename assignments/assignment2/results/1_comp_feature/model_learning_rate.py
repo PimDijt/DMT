@@ -81,30 +81,30 @@ feature_columns = [
     #"srch_query_affinity_score",
     #"orig_destination_distance",
     "random_bool",
-    "comp1_rate",
-    "comp1_inv",
-    "comp1_rate_percent_diff",
-    "comp2_rate",
-    "comp2_inv",
-    "comp2_rate_percent_diff",
-    "comp3_rate",
-    "comp3_inv",
-    "comp3_rate_percent_diff",
-    "comp4_rate",
-    "comp4_inv",
-    "comp4_rate_percent_diff",
-    "comp5_rate",
-    "comp5_inv",
-    "comp5_rate_percent_diff",
-    "comp6_rate",
-    "comp6_inv",
-    "comp6_rate_percent_diff",
-    "comp7_rate",
-    "comp7_inv",
-    "comp7_rate_percent_diff",
-    "comp8_rate",
-    "comp8_inv",
-    "comp8_rate_percent_diff",
+    #"comp1_rate",
+    #"comp1_inv",
+    #"comp1_rate_percent_diff",
+    #"comp2_rate",
+    #"comp2_inv",
+    #"comp2_rate_percent_diff",
+    #"comp3_rate",
+    #"comp3_inv",
+    #"comp3_rate_percent_diff",
+    #"comp4_rate",
+    #"comp4_inv",
+    #"comp4_rate_percent_diff",
+    #"comp5_rate",
+    #"comp5_inv",
+    #"comp5_rate_percent_diff",
+    #"comp6_rate",
+    #"comp6_inv",
+    #"comp6_rate_percent_diff",
+    #"comp7_rate",
+    #"comp7_inv",
+    #"comp7_rate_percent_diff",
+    #"comp8_rate",
+    #"comp8_inv",
+    #"comp8_rate_percent_diff",
     #"gross_bookings_usd",
 ]
 
@@ -122,7 +122,7 @@ added_features = [
     "price",
     "children",
     "length",
-    #"comp_score",
+    "comp_score",
 ]
 
 training_data = []
@@ -182,12 +182,12 @@ with open('../../data/training_250K.csv', newline='') as csvfile:
         extra_features.append(length)
 
         #change competitor score
-        #comp_score = 0
-        #for i in range(1,9):
-        #    comp_rate = row[columns.index("comp"+str(i)+"_rate")]
-        #    if not comp_rate == "NULL":
-        #        comp_score += int(comp_rate)
-        #extra_features.append(comp_score)
+        comp_score = 0
+        for i in range(1,9):
+            comp_rate = row[columns.index("comp"+str(i)+"_rate")]
+            if not comp_rate == "NULL":
+                comp_score += int(comp_rate)
+        extra_features.append(comp_score)
 
         #make the feature!
         result_dict = {}
@@ -337,38 +337,15 @@ def calc_max(targets):
         score += 1 / math.log2(i+1)
     return score
 
+#Gradident Boosting:
+#Gradient boost, estimators: 20
+#performed best!
+
+learning_rate = [0.1, 0.01]
 parameters = [20,40,60,80,100]
 
-print("Random Forest:")
 for p in parameters:
-    print("{} estimators".format(p))
-    forest = MultiOutputClassifier(RandomForestClassifier(n_estimators=p, random_state=1))
-    cross_validate(forest, training_data, target_data, search_amount, n_folds=10)
-
-print("Ada Boost:")
-for p in parameters:
-    print("Ada boost, estimators: {}".format(p))
-    ada = MultiOutputClassifier(AdaBoostClassifier(n_estimators=p, random_state=1))
-    cross_validate(ada, training_data, target_data, search_amount, n_folds=10)
-
-print("Extra Tree:")
-for p in parameters:
-    print("Ada boost, estimators: {}".format(p))
-    trees = MultiOutputClassifier(ExtraTreesClassifier(n_estimators=p, random_state=1))
-    cross_validate(trees, training_data, target_data, search_amount, n_folds=10)
-
-print("Gradient Boosting:")
-for p in parameters:
-    print("Gradient boost, estimators: {}".format(p))
-    grboost = MultiOutputClassifier(GradientBoostingClassifier(n_estimators=p, random_state=1))
-    cross_validate(grboost, training_data, target_data, search_amount, n_folds=10)
-
-'''
-for l in layers:
-    t = ()
-    for i in range(0,l):
-        t += (20,)
-    print("Neural net, {} layers of size 20:".format(l))
-    net = MultiOutputClassifier(MLPClassifier(hidden_layer_sizes=t, random_state=1))
-    cross_validate(net, training_data, target_data, search_amount, n_folds=10)
-'''
+    for l in learning_rate:
+        print("Gradient boost, estimators: {}, learning_rate: {}".format(p, l))
+        grboost = MultiOutputClassifier(GradientBoostingClassifier(learning_rate=l, n_estimators=p, random_state=1))
+        cross_validate(grboost, training_data, target_data, search_amount, n_folds=10)

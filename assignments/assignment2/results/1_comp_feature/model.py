@@ -357,7 +357,7 @@ for p in parameters:
     trees = MultiOutputClassifier(ExtraTreesClassifier(n_estimators=p, random_state=1))
     cross_validate(trees, training_data, target_data, search_amount, n_folds=10)
 
-print("Gradident Boosting:")
+print("Gradient Boosting:")
 for p in parameters:
     print("Gradient boost, estimators: {}".format(p))
     grboost = MultiOutputClassifier(GradientBoostingClassifier(n_estimators=p, random_state=1))
