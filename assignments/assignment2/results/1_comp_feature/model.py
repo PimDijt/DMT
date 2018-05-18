@@ -215,9 +215,14 @@ with open('../../data/training_100K.csv', newline='') as csvfile:
 search_amount = 0
 cur_srch_id = -1
 for item in training_data:
+    print(item)
     if item[0] != cur_srch_id:
         cur_srch_id = item[0]
         search_amount += 1
+
+
+
+
 
 def cross_validate(model, data, targets, search_amount, n_folds=10):
     if n_folds == 1:
