@@ -16,43 +16,43 @@ from sklearn.base import clone
 
 def make_daypart(hours):
     if hours >= 8 and hours < 12:
-        return "morning"
+        return 0
     elif hours >= 12 and hours < 18:
-        return "day"
+        return 1
     elif hours >= 18 and hours < 24:
-        return "evening"
+        return 2
     else:
-        return "night"
+        return 3 
 
 def make_distance(km):
     if km >= 0 and km < 200:
-        return "close"
+        return 1
     elif km >= 200 and km < 1000:
-        return "medium"
+        return 2
     elif km >= 1000:
-        return "far"
+        return 3
     else:
-        return "unknown"
+        return 0
 
 def make_price(price):
     if price >= 0 and price < 50:
-        return "cheap"
+        return 1
     elif price >= 50 and price < 100:
-        return "medium"
+        return 2
     elif price >= 100:
-        return "expensive"
+        return 3
     else:
-        return "unknown"
+        return 0
 
 def make_length(length):
     if length >= 0 and length < 3:
-        return "days"
+        return 0
     elif length >= 3 and length < 8:
-        return "week"
+        return 1
     elif length >= 8 and length < 15:
-        return "weeks"
+        return 2
     else:
-        return "month"
+        return 3
 
 feature_columns = [
     "srch_id",
@@ -81,31 +81,31 @@ feature_columns = [
     "srch_query_affinity_score",
     #"orig_destination_distance",
     "random_bool",
-    #"comp1_rate",
-    #"comp1_inv",
-    #"comp1_rate_percent_diff",
-    #"comp2_rate",
-    #"comp2_inv",
-    #"comp2_rate_percent_diff",
-    #"comp3_rate",
-    #"comp3_inv",
-    #"comp3_rate_percent_diff",
-    #"comp4_rate",
-    #"comp4_inv",
-    #"comp4_rate_percent_diff",
-    #"comp5_rate",
-    #"comp5_inv",
-    #"comp5_rate_percent_diff",
-    #"comp6_rate",
-    #"comp6_inv",
-    #"comp6_rate_percent_diff",
-    #"comp7_rate",
-    #"comp7_inv",
-    #"comp7_rate_percent_diff",
-    #"comp8_rate",
-    #"comp8_inv",
-    #"comp8_rate_percent_diff",
-    #"gross_bookings_usd",
+    "comp1_rate",
+    "comp1_inv",
+    "comp1_rate_percent_diff",
+    "comp2_rate",
+    "comp2_inv",
+    "comp2_rate_percent_diff",
+    "comp3_rate",
+    "comp3_inv",
+    "comp3_rate_percent_diff",
+    "comp4_rate",
+    "comp4_inv",
+    "comp4_rate_percent_diff",
+    "comp5_rate",
+    "comp5_inv",
+    "comp5_rate_percent_diff",
+    "comp6_rate",
+    "comp6_inv",
+    "comp6_rate_percent_diff",
+    "comp7_rate",
+    "comp7_inv",
+    "comp7_rate_percent_diff",
+    "comp8_rate",
+    "comp8_inv",
+    "comp8_rate_percent_diff",
+    "gross_bookings_usd",
 ]
 
 targets = [
@@ -122,12 +122,12 @@ added_features = [
     "price",
     "children",
     "length",
-    "comp_score",
+    #"comp_score",
 ]
 
 training_data = []
 target_data = []
-with open('../../data/training_250K.csv', newline='') as csvfile:
+with open('../../data/training_100K.csv', newline='') as csvfile:
     training = csv.reader(csvfile, delimiter=',')
     columns = next(training)
 
@@ -171,9 +171,9 @@ with open('../../data/training_250K.csv', newline='') as csvfile:
         #change children
         children = int(row[columns.index("srch_children_count")])
         if children > 0:
-            children = "yes"
+            children = 1
         else:
-            children = "no"
+            children = 0
         extra_features.append(children)
 
         #change stay length
@@ -196,31 +196,27 @@ with open('../../data/training_250K.csv', newline='') as csvfile:
             if value.replace('.', '').isdigit():
                 result_dict[feature] = float(value)
             else:
-                result_dict[feature] = value
+                result_dict[feature] = -1
 
         for feature in added_features:
             result_dict[feature] = extra_features[added_features.index(feature)]
 
-        training_data.append(result_dict)
+        result = list(result_dict.values())
+        training_data.append(result)
 
         #make target!
         target_dict = {}
         for target in targets:
             target_dict[target] = int(row[columns.index(target)])
-
-        target_data.append(target_dict)
-
-training_vec = DictVectorizer()
-training_data = training_vec.fit_transform(training_data).toarray()
-
-target_vec = DictVectorizer()
-target_data = target_vec.fit_transform(target_data).toarray()
+	
+        result = list(target_dict.values())
+        target_data.append(result)
 
 search_amount = 0
 cur_srch_id = -1
 for item in training_data:
-    if item[training_vec.feature_names_.index('srch_id')] != cur_srch_id:
-        cur_srch_id = item[training_vec.feature_names_.index('srch_id')]
+    if item[0] != cur_srch_id:
+        cur_srch_id = item[0]
         search_amount += 1
 
 def cross_validate(model, data, targets, search_amount, n_folds=10):
@@ -240,8 +236,8 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
         count = 0
         iterator = 0
         while count < i*slice_size:
-            if data[iterator][training_vec.feature_names_.index('srch_id')] != cur_srch_id:
-                cur_srch_id = data[iterator][training_vec.feature_names_.index('srch_id')]
+            if data[iterator][0] != cur_srch_id:
+                cur_srch_id = data[iterator][0]
                 count += 1
                 if count == slice_size:
                     break
@@ -251,8 +247,8 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
 
         count = 0
         while count < slice_size and iterator < len(data):
-            if data[iterator][training_vec.feature_names_.index('srch_id')] != cur_srch_id:
-                cur_srch_id = data[iterator][training_vec.feature_names_.index('srch_id')]
+            if data[iterator][0] != cur_srch_id:
+                cur_srch_id = data[iterator][0]
                 count += 1
                 if count == slice_size:
                     break
@@ -282,9 +278,9 @@ def assess_model(multi_target_forest, test_data, test_targets):
     cur_targets = []
     scores = []
     for i in range(0, len(test_data)):
-        if test_data[i][training_vec.feature_names_.index('srch_id')] != cur_srch_id:
+        if test_data[i][0] != cur_srch_id:
             #begin new search query
-            cur_srch_id = test_data[i][training_vec.feature_names_.index('srch_id')]
+            cur_srch_id = test_data[i][0]
             if i != 0:
                 score = assess_search(multi_target_forest, cur_search, cur_targets)
                 scores.append(score)
