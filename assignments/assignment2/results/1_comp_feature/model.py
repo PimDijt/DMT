@@ -81,30 +81,30 @@ feature_columns = [
     "srch_query_affinity_score",
     #"orig_destination_distance",
     "random_bool",
-    #"comp1_rate",
-    #"comp1_inv",
-    #"comp1_rate_percent_diff",
-    #"comp2_rate",
-    #"comp2_inv",
-    #"comp2_rate_percent_diff",
-    #"comp3_rate",
-    #"comp3_inv",
-    #"comp3_rate_percent_diff",
-    #"comp4_rate",
-    #"comp4_inv",
-    #"comp4_rate_percent_diff",
-    #"comp5_rate",
-    #"comp5_inv",
-    #"comp5_rate_percent_diff",
-    #"comp6_rate",
-    #"comp6_inv",
-    #"comp6_rate_percent_diff",
-    #"comp7_rate",
-    #"comp7_inv",
-    #"comp7_rate_percent_diff",
-    #"comp8_rate",
-    #"comp8_inv",
-    #"comp8_rate_percent_diff",
+    "comp1_rate",
+    "comp1_inv",
+    "comp1_rate_percent_diff",
+    "comp2_rate",
+    "comp2_inv",
+    "comp2_rate_percent_diff",
+    "comp3_rate",
+    "comp3_inv",
+    "comp3_rate_percent_diff",
+    "comp4_rate",
+    "comp4_inv",
+    "comp4_rate_percent_diff",
+    "comp5_rate",
+    "comp5_inv",
+    "comp5_rate_percent_diff",
+    "comp6_rate",
+    "comp6_inv",
+    "comp6_rate_percent_diff",
+    "comp7_rate",
+    "comp7_inv",
+    "comp7_rate_percent_diff",
+    "comp8_rate",
+    "comp8_inv",
+    "comp8_rate_percent_diff",
     #"gross_bookings_usd",
 ]
 
@@ -122,12 +122,13 @@ added_features = [
     "price",
     "children",
     "length",
-    "comp_score",
+    #"comp_score",
 ]
 
 training_data = []
 target_data = []
-with open('../../data/training_100K.csv', newline='') as csvfile:
+srch_id_found = False
+with open('../../data/training_250K.csv', newline='') as csvfile:
     training = csv.reader(csvfile, delimiter=',')
     columns = next(training)
 
@@ -190,18 +191,17 @@ with open('../../data/training_100K.csv', newline='') as csvfile:
         extra_features.append(comp_score)
 
         #make the feature!
-        result_dict = {}
+        result = []
         for feature in feature_columns:
             value = row[columns.index(feature)]
             if value.replace('.', '').isdigit():
-                result_dict[feature] = float(value)
+                result.append(float(value))
             else:
-                result_dict[feature] = -1
+                result.append(-1)
 
         for feature in added_features:
-            result_dict[feature] = extra_features[added_features.index(feature)]
+            result.append(extra_features[added_features.index(feature)])
 
-        result = list(result_dict.values())
         training_data.append(result)
 
         #make target!
@@ -306,11 +306,18 @@ def assess_search(multi_target_forest, search, targets):
         score = book_proba[i][1]*5 + click_proba[i][1]*1
         scores.append(score)
 
+    print("before:")
+    print(scores)
+    print(targets)
     scores, targets = (list(t) for t in zip(*sorted(zip(scores, targets), reverse=True)))
 
-
+    print("after:")
+    print(scores)
+    print(targets)
     my_score = calc_score(targets)
+    print(my_score)
     max_score = calc_max(targets)
+    print(max_score)
 
     ndcg = my_score / max_score
     return ndcg

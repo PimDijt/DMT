@@ -105,7 +105,7 @@ feature_columns = [
     "comp8_rate",
     "comp8_inv",
     "comp8_rate_percent_diff",
-    "gross_bookings_usd",
+    #"gross_bookings_usd",
 ]
 
 targets = [
@@ -127,7 +127,8 @@ added_features = [
 
 training_data = []
 target_data = []
-with open('../../data/training_100K.csv', newline='') as csvfile:
+srch_id_found = False
+with open('../../data/training_250K.csv', newline='') as csvfile:
     training = csv.reader(csvfile, delimiter=',')
     columns = next(training)
 
@@ -190,18 +191,17 @@ with open('../../data/training_100K.csv', newline='') as csvfile:
         extra_features.append(comp_score)
 
         #make the feature!
-        result_dict = {}
+        result = []
         for feature in feature_columns:
             value = row[columns.index(feature)]
             if value.replace('.', '').isdigit():
-                result_dict[feature] = float(value)
+                result.append(float(value))
             else:
-                result_dict[feature] = -1
+                result.append(-1)
 
         for feature in added_features:
-            result_dict[feature] = extra_features[added_features.index(feature)]
+            result.append(extra_features[added_features.index(feature)])
 
-        result = list(result_dict.values())
         training_data.append(result)
 
         #make target!
@@ -302,7 +302,6 @@ def assess_search(multi_target_forest, search, targets):
         scores.append(score)
 
     scores, targets = (list(t) for t in zip(*sorted(zip(scores, targets), reverse=True)))
-
 
     my_score = calc_score(targets)
     max_score = calc_max(targets)
