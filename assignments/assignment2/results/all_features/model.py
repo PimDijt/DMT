@@ -107,6 +107,7 @@ feature_columns = [
     "comp8_rate_percent_diff",
     #"gross_bookings_usd",
 ]
+
 targets = [
     "booking_bool",
     "click_bool",
@@ -216,10 +217,6 @@ for item in training_data:
         cur_srch_id = item[0]
         search_amount += 1
 
-
-
-
-
 def cross_validate(model, data, targets, search_amount, n_folds=10):
     if n_folds == 1:
         slice_size = search_amount/10
@@ -227,7 +224,6 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
         slice_size = search_amount / n_folds
     scores = []
     for i in range(0,n_folds):
-        #print("Fold: {}".format(i+1))
         training_data = []
         training_targets = []
         test_data = []
@@ -242,7 +238,7 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
                 count += 1
                 if count == slice_size:
                     break
-            training_data.append(data[iterator])
+            training_data.append(data[iterator][1:])
             training_targets.append(targets[iterator])
             iterator += 1
 
@@ -258,7 +254,7 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
             iterator += 1
 
         while iterator < len(data):
-            training_data.append(data[iterator])
+            training_data.append(data[iterator][1:])
             training_targets.append(targets[iterator])
             iterator += 1
 
@@ -270,8 +266,6 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
     for s in scores:
         print("{0:.2f}".format(s), end=" ")
     print("\nAverage: {0:.2f}\n".format(sum(scores)/len(scores)))
-
-
 
 def assess_model(multi_target_forest, test_data, test_targets):
     cur_srch_id = -1
@@ -285,12 +279,11 @@ def assess_model(multi_target_forest, test_data, test_targets):
             if i != 0:
                 score = assess_search(multi_target_forest, cur_search, cur_targets)
                 scores.append(score)
-            cur_search = [test_data[i]]
-            cur_targets = [list(test_targets[i])]
+            cur_search = [test_data[i][1:]]
+            cur_targets = [test_targets[i]]
         else:
-            cur_search.append(test_data[i])
-            cur_targets.append(list(test_targets[i]))
-    #print("Score: {}".format(sum(scores)/len(scores)))
+            cur_search.append(test_data[i][1:])
+            cur_targets.append(test_targets[i])
     return sum(scores)/len(scores)
 
 def assess_search(multi_target_forest, search, targets):
@@ -315,23 +308,24 @@ def calc_score(targets):
     for i in range(0, len(targets)):
         if targets[i][0] == 1:
             score += (2**5 - 1) / math.log2(i+1+1)
-        else:
-            score += (2**(targets[i][1] * 1) - 1 ) / math.log2(i+1+1)
+        elif targets[i][1] == 1:
+            score += (2**1 - 1 ) / math.log2(i+1+1)
     return score
 
 def calc_max(targets):
     click_count = 0
     book_count = 0
+    score = 0
     for item in targets:
         if item[1] == 1:
             click_count += 1
         if item[0] == 1:
             book_count = 1
-
     if book_count > 0:
-        score = (2**5 -1)
+        score = (2**5) - 1
+        click_count -= 1
     elif click_count > 0:
-        score = (2**1 -1)
+        score = (2**1) - 1
         click_count -= 1
     else:
         score = 0
@@ -364,13 +358,3 @@ for p in parameters:
     print("Gradient boost, estimators: {}".format(p))
     grboost = MultiOutputClassifier(GradientBoostingClassifier(n_estimators=p, random_state=1))
     cross_validate(grboost, training_data, target_data, search_amount, n_folds=10)
-
-'''
-for l in layers:
-    t = ()
-    for i in range(0,l):
-        t += (20,)
-    print("Neural net, {} layers of size 20:".format(l))
-    net = MultiOutputClassifier(MLPClassifier(hidden_layer_sizes=t, random_state=1))
-    cross_validate(net, training_data, target_data, search_amount, n_folds=10)
-'''
