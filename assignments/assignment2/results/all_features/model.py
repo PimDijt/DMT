@@ -107,7 +107,6 @@ feature_columns = [
     "comp8_rate_percent_diff",
     #"gross_bookings_usd",
 ]
-
 targets = [
     "booking_bool",
     "click_bool",
@@ -205,19 +204,21 @@ with open('../../data/training_250K.csv', newline='') as csvfile:
         training_data.append(result)
 
         #make target!
-        target_dict = {}
+        target_result = []
         for target in targets:
-            target_dict[target] = int(row[columns.index(target)])
+            target_result.append(int(row[columns.index(target)]))
+        target_data.append(target_result)
 	
-        result = list(target_dict.values())
-        target_data.append(result)
-
 search_amount = 0
 cur_srch_id = -1
 for item in training_data:
     if item[0] != cur_srch_id:
         cur_srch_id = item[0]
         search_amount += 1
+
+
+
+
 
 def cross_validate(model, data, targets, search_amount, n_folds=10):
     if n_folds == 1:
@@ -310,26 +311,32 @@ def assess_search(multi_target_forest, search, targets):
     return ndcg
 
 def calc_score(targets):
-    if targets[0][0] == 1:
-        score = 5
-    else:
-        score = targets[0][1] * 1
-    for i in range(1, len(targets)):
-        if targets[i][1] == 1:
-            score += 5 / math.log2(i+1)
+    score = 0
+    for i in range(0, len(targets)):
+        if targets[i][0] == 1:
+            score += (2**5 - 1) / math.log2(i+1+1)
         else:
-            score += targets[i][1] * 1 / math.log2(i+1)
+            score += (2**(targets[i][1] * 1) - 1 ) / math.log2(i+1+1)
     return score
 
 def calc_max(targets):
-    click_count = -1
+    click_count = 0
+    book_count = 0
     for item in targets:
         if item[1] == 1:
             click_count += 1
+        if item[0] == 1:
+            book_count = 1
 
-    score = 5
-    for i in range(1, click_count+1):
-        score += 1 / math.log2(i+1)
+    if book_count > 0:
+        score = (2**5 -1)
+    elif click_count > 0:
+        score = (2**1 -1)
+        click_count -= 1
+    else:
+        score = 0
+    for i in range(0, click_count):
+        score += (2**1 -1) / math.log2(i+1+1)
     return score
 
 parameters = [20,40,60,80,100]
