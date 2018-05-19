@@ -238,7 +238,7 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
                 count += 1
                 if count == slice_size:
                     break
-            training_data.append(data[iterator])
+            training_data.append(data[iterator][1:])
             training_targets.append(targets[iterator])
             iterator += 1
 
@@ -254,7 +254,7 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
             iterator += 1
 
         while iterator < len(data):
-            training_data.append(data[iterator])
+            training_data.append(data[iterator][1:])
             training_targets.append(targets[iterator])
             iterator += 1
 
@@ -279,11 +279,11 @@ def assess_model(multi_target_forest, test_data, test_targets):
             if i != 0:
                 score = assess_search(multi_target_forest, cur_search, cur_targets)
                 scores.append(score)
-            cur_search = [test_data[i]]
-            cur_targets = [list(test_targets[i])]
+            cur_search = [test_data[i][1:]]
+            cur_targets = [test_targets[i]]
         else:
-            cur_search.append(test_data[i])
-            cur_targets.append(list(test_targets[i]))
+            cur_search.append(test_data[i][1:])
+            cur_targets.append(test_targets[i])
     return sum(scores)/len(scores)
 
 def assess_search(multi_target_forest, search, targets):
