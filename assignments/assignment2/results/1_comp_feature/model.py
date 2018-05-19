@@ -81,30 +81,30 @@ feature_columns = [
     "srch_query_affinity_score",
     #"orig_destination_distance",
     "random_bool",
-    "comp1_rate",
-    "comp1_inv",
-    "comp1_rate_percent_diff",
-    "comp2_rate",
-    "comp2_inv",
-    "comp2_rate_percent_diff",
-    "comp3_rate",
-    "comp3_inv",
-    "comp3_rate_percent_diff",
-    "comp4_rate",
-    "comp4_inv",
-    "comp4_rate_percent_diff",
-    "comp5_rate",
-    "comp5_inv",
-    "comp5_rate_percent_diff",
-    "comp6_rate",
-    "comp6_inv",
-    "comp6_rate_percent_diff",
-    "comp7_rate",
-    "comp7_inv",
-    "comp7_rate_percent_diff",
-    "comp8_rate",
-    "comp8_inv",
-    "comp8_rate_percent_diff",
+    #"comp1_rate",
+    #"comp1_inv",
+    #"comp1_rate_percent_diff",
+    #"comp2_rate",
+    #"comp2_inv",
+    #"comp2_rate_percent_diff",
+    #"comp3_rate",
+    #"comp3_inv",
+    #"comp3_rate_percent_diff",
+    #"comp4_rate",
+    #"comp4_inv",
+    #"comp4_rate_percent_diff",
+    #"comp5_rate",
+    #"comp5_inv",
+    #"comp5_rate_percent_diff",
+    #"comp6_rate",
+    #"comp6_inv",
+    #"comp6_rate_percent_diff",
+    #"comp7_rate",
+    #"comp7_inv",
+    #"comp7_rate_percent_diff",
+    #"comp8_rate",
+    #"comp8_inv",
+    #"comp8_rate_percent_diff",
     #"gross_bookings_usd",
 ]
 
@@ -122,7 +122,7 @@ added_features = [
     "price",
     "children",
     "length",
-    #"comp_score",
+    "comp_score",
 ]
 
 training_data = []
@@ -205,17 +205,14 @@ with open('../../data/training_250K.csv', newline='') as csvfile:
         training_data.append(result)
 
         #make target!
-        target_dict = {}
+        target_result = []
         for target in targets:
-            target_dict[target] = int(row[columns.index(target)])
+            target_result.append(int(row[columns.index(target)]))
+        target_data.append(target_result)
 	
-        result = list(target_dict.values())
-        target_data.append(result)
-
 search_amount = 0
 cur_srch_id = -1
 for item in training_data:
-    print(item)
     if item[0] != cur_srch_id:
         cur_srch_id = item[0]
         search_amount += 1
@@ -306,43 +303,41 @@ def assess_search(multi_target_forest, search, targets):
         score = book_proba[i][1]*5 + click_proba[i][1]*1
         scores.append(score)
 
-    print("before:")
-    print(scores)
-    print(targets)
     scores, targets = (list(t) for t in zip(*sorted(zip(scores, targets), reverse=True)))
 
-    print("after:")
-    print(scores)
-    print(targets)
     my_score = calc_score(targets)
-    print(my_score)
     max_score = calc_max(targets)
-    print(max_score)
 
     ndcg = my_score / max_score
     return ndcg
 
 def calc_score(targets):
-    if targets[0][0] == 1:
-        score = 5
-    else:
-        score = targets[0][1] * 1
-    for i in range(1, len(targets)):
-        if targets[i][1] == 1:
-            score += 5 / math.log2(i+1)
+    score = 0
+    for i in range(0, len(targets)):
+        if targets[i][0] == 1:
+            score += (2**5 - 1) / math.log2(i+1+1)
         else:
-            score += targets[i][1] * 1 / math.log2(i+1)
+            score += (2**(targets[i][1] * 1) - 1 ) / math.log2(i+1+1)
     return score
 
 def calc_max(targets):
-    click_count = -1
+    click_count = 0
+    book_count = 0
     for item in targets:
         if item[1] == 1:
             click_count += 1
+        if item[0] == 1:
+            book_count = 1
 
-    score = 5
-    for i in range(1, click_count+1):
-        score += 1 / math.log2(i+1)
+    if book_count > 0:
+        score = (2**5 -1)
+    elif click_count > 0:
+        score = (2**1 -1)
+        click_count -= 1
+    else:
+        score = 0
+    for i in range(0, click_count):
+        score += (2**1 -1) / math.log2(i+1+1)
     return score
 
 parameters = [20,40,60,80,100]
