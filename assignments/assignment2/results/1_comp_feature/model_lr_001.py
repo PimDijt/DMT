@@ -13,6 +13,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.base import clone
+from xgboost import XGBClassifier
 
 def make_daypart(hours):
     if hours >= 8 and hours < 12:
@@ -355,14 +356,26 @@ def calc_max(targets):
 
 parameters = [20,40,60,80,100]
 
+print("XGBoost:")
+for p in parameters:
+    print("{} estimators")
+    xgboost = MultiOutputClassifier(XGBClassifier(n_estimators=p, learning_rate=0.01, n_jobs=-1))
+    cross_validate(xgboost, training_data, target_data, search_amount, n_folds=10)
+
+print("Random Forest:")
+for p in parameters:
+    print("{} estimators".format(p))
+    forest = MultiOutputClassifier(RandomForestClassifier(n_estimators=p, n_jobs=-1))
+    cross_validate(forest, training_data, target_data, search_amount, n_folds=10)
+
 print("Ada Boost:")
 for p in parameters:
-    print("Ada boost, estimators: {}".format(p))
-    ada = MultiOutputClassifier(AdaBoostClassifier(n_estimators=p, random_state=1, learning_rate=0.01))
+    print("{} estimators".format(p))
+    ada = MultiOutputClassifier(AdaBoostClassifier(n_estimators=p, learning_rate=0.01))
     cross_validate(ada, training_data, target_data, search_amount, n_folds=10)
 
 print("Gradient Boosting:")
 for p in parameters:
-    print("Gradient boost, estimators: {}".format(p))
-    grboost = MultiOutputClassifier(GradientBoostingClassifier(n_estimators=p, random_state=1, learning_rate=0.01))
+    print("{} estimators".format(p))
+    grboost = MultiOutputClassifier(GradientBoostingClassifier(n_estimators=p, learning_rate=0.01))
     cross_validate(grboost, training_data, target_data, search_amount, n_folds=10)
