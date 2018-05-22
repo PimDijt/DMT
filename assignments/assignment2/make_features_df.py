@@ -214,7 +214,7 @@ def prep_dataframe(df_in, in_place=True):
     df["price_usd_categ"] = df["price_usd"].apply(lambda row: make_price(row))
 
     # change children
-    df["has_children"] = df.srch_children_count > 0
+    df["has_children"] = np.where(df['srch_children_count'] > 0, 1, 0)
 
     # change stay length
     df["srch_length_of_stay_categ"] = df["srch_length_of_stay"].apply(lambda row: make_length(row))
