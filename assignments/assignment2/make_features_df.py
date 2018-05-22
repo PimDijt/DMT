@@ -232,7 +232,9 @@ def prep_dataframe(df_in, in_place=True):
     #idea: check how many std's difference
 
     # remove all NaN's from the dataframe
-    df = df.fillna('') # untested, not sure if this makes errors later on, also takes very long
+    #df = df.fillna('') # untested, not sure if this makes errors later on, also takes very long
+    #df = df.replace(np.nan, '', regex=True)
+    df.fillna('', inplace=True)
 
     return df
 

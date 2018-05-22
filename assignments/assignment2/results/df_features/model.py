@@ -19,8 +19,5 @@ df = make_features_df.load_file("../../data/training_100K.csv") # Create df from
 make_features_df.prep_dataframe(df) # make features NB: done in place!
 features, target = make_features_df.create_features_and_target(df)
 
-print(features[0])
-print(target[0])
-
-print(features[1])
-print(target[1])
+for i in range(0, 25):
+    print(features[i], len(features[i]))

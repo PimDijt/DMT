@@ -176,7 +176,10 @@ def features_to_exclude():
 '''
 def load_file(fname, sample_size=1):
     try:
-        return pd.read_csv(fname).sample(frac=sample_size)
+        if sample_size < 1:
+            return pd.read_csv(fname).sample(frac=sample_size)
+        else:
+            return pd.read_csv(fname)
     except FileNotFoundError:
         print("File not found, closing!")
         exit()
@@ -211,7 +214,7 @@ def prep_dataframe(df_in, in_place=True):
     df["price_usd_categ"] = df["price_usd"].apply(lambda row: make_price(row))
 
     # change children
-    df["has_children"] = df.srch_children_count > 0
+    df["has_children"] = np.where(df['srch_children_count'] > 0, 1, 0)
 
     # change stay length
     df["srch_length_of_stay_categ"] = df["srch_length_of_stay"].apply(lambda row: make_length(row))
@@ -229,7 +232,9 @@ def prep_dataframe(df_in, in_place=True):
     #idea: check how many std's difference
 
     # remove all NaN's from the dataframe
-    df = df.fillna('') # untested, not sure if this makes errors later on, also takes very long
+    #df = df.fillna('') # untested, not sure if this makes errors later on, also takes very long
+    #df = df.replace(np.nan, '', regex=True)
+    df.fillna('', inplace=True)
 
     return df
 
