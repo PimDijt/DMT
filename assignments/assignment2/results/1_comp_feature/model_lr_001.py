@@ -22,7 +22,7 @@ def make_daypart(hours):
     elif hours >= 18 and hours < 24:
         return 2
     else:
-        return 3 
+        return 3
 
 def make_distance(km):
     if km >= 0 and km < 200:
@@ -128,7 +128,7 @@ added_features = [
 training_data = []
 target_data = []
 srch_id_found = False
-with open('../../data/training_250K.csv', newline='') as csvfile:
+with open('../../data/training_100K.csv', newline='') as csvfile:
     training = csv.reader(csvfile, delimiter=',')
     columns = next(training)
 
@@ -209,7 +209,9 @@ with open('../../data/training_250K.csv', newline='') as csvfile:
         for target in targets:
             target_result.append(int(row[columns.index(target)]))
         target_data.append(target_result)
-	
+
+
+#Find how many unique searchers are in the data.
 search_amount = 0
 cur_srch_id = -1
 for item in training_data:
@@ -232,6 +234,8 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
         cur_srch_id = -1
         count = 0
         iterator = 0
+
+        #take "left" of the test part
         while count < i*slice_size:
             if data[iterator][0] != cur_srch_id:
                 cur_srch_id = data[iterator][0]
@@ -242,6 +246,7 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
             training_targets.append(targets[iterator])
             iterator += 1
 
+        #take the test part
         count = 0
         while count < slice_size and iterator < len(data):
             if data[iterator][0] != cur_srch_id:
@@ -253,10 +258,12 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
             test_targets.append(targets[iterator])
             iterator += 1
 
+        #take "right" of the test part
         while iterator < len(data):
             training_data.append(data[iterator][1:])
             training_targets.append(targets[iterator])
             iterator += 1
+
 
         fold_model = clone(model)
         fold_model.fit(training_data, training_targets)
@@ -267,7 +274,7 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
         print("{0:.2f}".format(s), end=" ")
     print("\nAverage: {0:.2f}\n".format(sum(scores)/len(scores)))
 
-def assess_model(multi_target_forest, test_data, test_targets):
+def assess_model(model, test_data, test_targets):
     cur_srch_id = -1
     cur_search = []
     cur_targets = []
@@ -277,7 +284,7 @@ def assess_model(multi_target_forest, test_data, test_targets):
             #begin new search query
             cur_srch_id = test_data[i][0]
             if i != 0:
-                score = assess_search(multi_target_forest, cur_search, cur_targets)
+                score = assess_search(model, cur_search, cur_targets)
                 scores.append(score)
             cur_search = [test_data[i][1:]]
             cur_targets = [test_targets[i]]
@@ -286,8 +293,8 @@ def assess_model(multi_target_forest, test_data, test_targets):
             cur_targets.append(test_targets[i])
     return sum(scores)/len(scores)
 
-def assess_search(multi_target_forest, search, targets):
-    results = multi_target_forest.predict_proba(search)
+def assess_search(model, search, targets):
+    results = model.predict_proba(search)
     scores = []
     book_proba = results[0]
     click_proba = results[1]
@@ -295,12 +302,25 @@ def assess_search(multi_target_forest, search, targets):
         score = book_proba[i][1]*5 + click_proba[i][1]*1
         scores.append(score)
 
+    #old_scores = scores
+    #old_targets = targets
+
     scores, targets = (list(t) for t in zip(*sorted(zip(scores, targets), reverse=True)))
 
-    my_score = calc_score(targets)
-    max_score = calc_max(targets)
+    new_targets = sorted(targets, key = lambda x: (x[0], x[1]), reverse=True)
 
-    ndcg = my_score / max_score
+
+    my_score = calc_score(targets)
+
+    #max_score = calc_max(targets)
+
+    max_score2 = calc_score(new_targets)
+    ndcg = my_score / max_score2 if max_score2 > 0 else 0
+    # if max_score != max_score2:
+    #     print(my_score, max_score, ndcg, max_score2)
+    #     for i in range(0, len(scores)):
+    #         print(old_scores[i], scores[i], old_targets[i], targets[i], new_targets[i])
+    #     exit()
     return ndcg
 
 def calc_score(targets):
