@@ -70,13 +70,13 @@ def make_length(length):
         return 2 #"weeks"
     else:
         return 3 #"month"
-    
+
 def make_star_rating(rating):
     if math.isnan(rating):
         return -1
     else:
         return round(rating)
-    
+
 # return -1 if there is a competitor with cheaper price, 0 if same, 1 if all competitors are more expensive.
 # only counts competitors that actually have room
 # NB: SIGNIFICANTLY SLOWS DOWN THE DATA PREPPING
@@ -169,14 +169,17 @@ def features_to_exclude():
 # MAIN METHODS
 ###
 ''' Load file
-   
-    Args: 
+
+    Args:
         fname: String with filename (if necessary include path)
-        sample_size: float with sample size to create, between 0 and 1, default:1, 
+        sample_size: float with sample size to create, between 0 and 1, default:1,
 '''
 def load_file(fname, sample_size=1):
     try:
-        return pd.read_csv(fname).sample(frac=sample_size)
+        if sample_size < 1:
+            return pd.read_csv(fname).sample(frac=sample_size)
+        else:
+            return pd.read_csv(fname)
     except FileNotFoundError:
         print("File not found, closing!")
         exit()
@@ -193,7 +196,7 @@ def load_file(fname, sample_size=1):
 '''
 def prep_dataframe(df_in, in_place=True):
     df = df_in if in_place else df_in.copy()
-    
+
     # convert date_time to datetime
     df["date_time"] = pd.to_datetime(df["date_time"])
 
@@ -203,7 +206,7 @@ def prep_dataframe(df_in, in_place=True):
     df["srch_month"] = df["date_time"].dt.month
     df["srch_quarter"] = df["date_time"].dt.quarter
     df["srch_year"] = df["date_time"].dt.year
-    
+
     # change the distance
     df["orig_destination_distance_categ"] = df["orig_destination_distance"].apply(lambda row: make_distance(row))
 
@@ -215,31 +218,31 @@ def prep_dataframe(df_in, in_place=True):
 
     # change stay length
     df["srch_length_of_stay_categ"] = df["srch_length_of_stay"].apply(lambda row: make_length(row))
-    
+
     # change starratings
     df["visitor_hist_starrating"] = df["visitor_hist_starrating"].apply(lambda row: make_star_rating(row))
 
     # change competitor score
     df["comp_all_rate"] = df[["comp%d_rate" % i for i in range(1,9)]].min(axis=1)
     df["comp_all_rate_avail"] = df.apply(make_comp_score, axis=1) #NB: Expensive calculation #TODO: optimize with df methods instead of this disgrace to humanity
-    
+
     #TODO: Do something with the relationship between visitor_hist_adr_usd and price_usd
     #idea: check if same category (problem case: 0-200 is cheap, 201+ is expensive, what if prices are 199 and 202?)
     #idea: check if less than or more than
     #idea: check how many std's difference
-    
+
     # remove all NaN's from the dataframe
     df = df.fillna('') # untested, not sure if this makes errors later on, also takes very long
-    
+
     return df
 
 '''Create features and target
 
     Args:
-        
+
     Returns:
         List of features
-        List of targets 
+        List of targets
 '''
 def create_features_and_target(df):
     features = df[[val for val in df.columns.values if val not in features_to_exclude()]].values
