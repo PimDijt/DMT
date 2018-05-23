@@ -234,7 +234,7 @@ def prep_dataframe(df_in, in_place=True):
     # remove all NaN's from the dataframe
     #df = df.fillna('') # untested, not sure if this makes errors later on, also takes very long
     #df = df.replace(np.nan, '', regex=True)
-    df.fillna('', inplace=True)
+    df.fillna(-9000, inplace=True)
 
     return df
 
@@ -248,5 +248,5 @@ def prep_dataframe(df_in, in_place=True):
 '''
 def create_features_and_target(df):
     features = df[[val for val in df.columns.values if val not in features_to_exclude()]].values
-    target = df[["booking_bool", "click_bool"]].values
+    target = df[["booking_bool", "click_bool"]].values.tolist()
     return features, target

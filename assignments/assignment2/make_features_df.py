@@ -234,7 +234,7 @@ def prep_dataframe(df_in, in_place=True):
     # remove all NaN's from the dataframe
     #df = df.fillna('') # untested, not sure if this makes errors later on, also takes very long
     #df = df.replace(np.nan, '', regex=True)
-    df.fillna('', inplace=True)
+    df.fillna(-9000, inplace=True)
 
     return df
 
