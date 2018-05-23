@@ -12,10 +12,10 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.base import clone
-#from xgboost import XGBClassifier
+from xgboost import XGBClassifier
 
 import make_features_df
-df = make_features_df.load_file("../../data/training_100K.csv") # Create df from the file
+df = make_features_df.load_file("../../data/training_250K.csv") # Create df from the file
 make_features_df.prep_dataframe(df) # make features NB: done in place!
 training_data, target_data = make_features_df.create_features_and_target(df)
 
@@ -36,7 +36,6 @@ def cross_validate(model, data, targets, search_amount, n_folds=10):
         slice_size = search_amount / n_folds
     scores = []
     for i in range(0,n_folds):
-        print("Fold: {}".format(i))
         training_data = []
         training_targets = []
         test_data = []
@@ -166,11 +165,11 @@ def calc_max(targets):
 
 parameters = [20,40,60,80,100]
 
-#print("XGBoost:")
-#for p in parameters:
-#    print("{} estimators")
-#    xgboost = MultiOutputClassifier(XGBClassifier(n_estimators=p, learning_rate=0.01, n_jobs=-1))
-#    cross_validate(xgboost, training_data, target_data, search_amount, n_folds=10)
+print("XGBoost:")
+for p in parameters:
+    print("{} estimators".format(p))
+    xgboost = MultiOutputClassifier(XGBClassifier(n_estimators=p, learning_rate=0.01, n_jobs=-1))
+    cross_validate(xgboost, training_data, target_data, search_amount, n_folds=10)
 
 print("Random Forest:")
 for p in parameters:
