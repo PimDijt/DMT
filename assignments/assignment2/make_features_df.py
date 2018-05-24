@@ -26,6 +26,7 @@ import pandas as pd #https://www.dataquest.io/blog/large_files/pandas-cheat-shee
 import seaborn as sns
 import itertools
 import csv
+import random
 
 
 ###
@@ -177,9 +178,12 @@ def features_to_exclude():
 def load_file(fname, sample_size=1):
     try:
         if sample_size < 1:
-            return pd.read_csv(fname).sample(frac=sample_size)
+            df = pd.read_csv(fname)
+            return df[df.srch_id.isin(random.sample(df.srch_id.unique().tolist(), int(sample_size * df.srch_id.unique().size)))]
+
         else:
             return pd.read_csv(fname)
+            
     except FileNotFoundError:
         print("File not found, closing!")
         exit()
